@@ -1,5 +1,11 @@
-// Firebase 콘솔 > 프로젝트 설정 > 내 앱 > 웹 앱 SDK 설정에서 firebaseConfig를 복사하세요.
-// 아래 null을 { apiKey: "...", authDomain: "...", projectId: "...", ... } 로 교체합니다.
-// 예: window.TREASURE_FIREBASE_CONFIG = { apiKey: "...", authDomain: "...", projectId: "...", storageBucket: "...", messagingSenderId: "...", appId: "..." };
-// 중요: 관리자 이메일/비밀번호, 서비스 계정 비밀키, 개인키는 이 파일에 넣지 마세요.
-window.TREASURE_FIREBASE_CONFIG = null;
+// Firebase 웹앱 연결 설정 (프로젝트: sejong-treasure-hunt)
+// 웹 클라이언트 설정값이며 관리자 비밀번호/서비스 계정 비밀키를 넣지 마세요.
+window.TREASURE_FIREBASE_CONFIG = {
+  "apiKey": "AIzaSyDhE53orb7LMpWdk_xFnigOELot7JX5PSo",
+  "authDomain": "sejong-treasure-hunt.firebaseapp.com",
+  "databaseURL": "https://sejong-treasure-hunt-default-rtdb.asia-southeast1.firebasedatabase.app",
+  "projectId": "sejong-treasure-hunt",
+  "storageBucket": "sejong-treasure-hunt.firebasestorage.app",
+  "messagingSenderId": "969519216757",
+  "appId": "1:969519216757:web:323833c4cec1e2dceca03c"
+};
