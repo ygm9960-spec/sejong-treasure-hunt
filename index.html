@@ -332,20 +332,7 @@ body{background-image:radial-gradient(circle at 0% 0%,rgba(151,113,238,.10),tran
 @keyframes v30GoldSlide{50%{background-position:100% 100%}}
 @keyframes v30Seal{50%{transform:scale(.94) rotate(-6deg);filter:brightness(1.5)}}
 /* 1 and 5. Short cinematic treasure discovery and collection milestones */
-.v30-reveal-stage{position:relative;min-height:345px;overflow:hidden;border-radius:22px;padding:24px 12px 14px;text-align:center;background:radial-gradient(circle at center 51%,#654b83 0%,#25316c 37%,#0f193d 86%);color:#fff;isolation:isolate;display:flex;align-items:center;justify-content:center;flex-direction:column}
-.v30-reveal-label{z-index:4;position:relative;font-size:12px;font-weight:950;letter-spacing:2px;color:#ffe2a3}
-.v30-reveal-orbit{position:absolute;top:18%;width:236px;height:236px;border-radius:50%;border:2px dashed #ead09c75;box-shadow:0 0 0 24px #d2b6fe0b,0 0 0 43px #f8d97a0d;animation:v30Sigil 5s linear infinite}
-.v30-reveal-orbit:before,.v30-reveal-orbit:after{content:'';position:absolute;inset:23px;border-radius:50%;border:2px solid #d8c7fa4d}
-.v30-reveal-orbit:after{inset:45px;border-color:#ffe7af7a}
-.v30-reveal-rune{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);letter-spacing:16px;white-space:nowrap;color:#ffe5a7;font-size:17px}
-.v30-reveal-chest{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;height:190px;margin-top:6px;font-size:110px;filter:drop-shadow(0 18px 20px #120c37);animation:v30ChestArrival .68s cubic-bezier(.2,1.3,.36,1) both}
-.v30-chest-lid{font-size:24px;position:absolute;z-index:1;top:20px;left:20px;animation:v30LidFly 1.2s ease both}
-.v30-chest-light{position:absolute;z-index:-1;width:150px;height:150px;background:radial-gradient(circle,#ffe6a3,transparent 70%);filter:blur(19px);animation:v30LightBurst 1.2s ease both}
-.v30-reveal-flash{position:absolute;inset:0;z-index:1;pointer-events:none;background:#fff7d5;opacity:0;animation:v30Flash 1.2s ease both}
-.v30-reveal-caption{position:relative;z-index:4;font-size:15px;font-weight:850;color:#f1e9ff;margin:0 0 10px}
-.v30-skip{z-index:5;background:#ffffff18;border:1px solid #ffffff55;color:#fff;font-size:13px;font-weight:800;padding:9px 15px;border-radius:12px;cursor:pointer}
-.v30-reveal-stage.is-first{background:radial-gradient(circle,#ad7a46,#4e326b 50%,#111b43 90%)}
-.v30-reveal-stage.is-first .v30-reveal-orbit,.v30-reveal-stage.is-complete .v30-reveal-orbit{border-color:#ffe1a7;box-shadow:0 0 20px #f6ce94,0 0 0 34px #ffe5a720}
+.v30-skip{background:#ffffff18;border:1px solid #ffffff55;color:#fff;font-size:13px;font-weight:800;padding:9px 15px;border-radius:12px;cursor:pointer}
 .v30-result-shell{text-align:center;animation:v30ResultShow .32s ease both}
 .v30-result-kicker{display:block;color:#8260b4;font-size:12px;font-weight:950;letter-spacing:2px;margin-bottom:8px}
 .v30-result-card{position:relative;display:grid;place-items:center;max-width:290px;aspect-ratio:1.05;margin:0 auto;border-radius:24px;padding:18px;overflow:hidden;border:3px solid #f1d38c;background:radial-gradient(circle at 45% 32%,#fff 0%,var(--v30-accent,#ffe5b8) 90%);box-shadow:0 17px 28px #493a761e,inset 0 0 0 5px #ffffff6b}
@@ -366,13 +353,40 @@ body{background-image:radial-gradient(circle at 0% 0%,rgba(151,113,238,.10),tran
 .v30-milestone>span{font-size:38px;animation:v30MilestonePop .65s ease both}
 .v30-milestone small{display:block;color:#e9dba8;letter-spacing:1px;font-size:10px;font-weight:900}
 .v30-milestone strong{display:block;font-size:17px}
-@keyframes v30ChestArrival{0%{transform:translateY(65px) scale(.6);opacity:0}70%{transform:translateY(-11px) scale(1.1)}100%{transform:translateY(0) scale(1);opacity:1}}
-@keyframes v30LidFly{0%,38%{transform:translateY(0);opacity:.2}85%{transform:translateY(-47px) scale(1.45);opacity:1}100%{transform:translateY(-36px);opacity:0}}
-@keyframes v30LightBurst{0%{opacity:0;transform:scale(.2)}60%{opacity:.3;transform:scale(1.1)}100%{opacity:.95;transform:scale(1.3)}}
-@keyframes v30Flash{0%,45%{opacity:0}65%{opacity:.22}100%{opacity:0}}
 @keyframes v30ResultShow{from{opacity:0;transform:translateY(9px) scale(.97)}to{opacity:1;transform:none}}
 @keyframes v30ProgressGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes v30MilestonePop{0%{transform:scale(.5) rotate(-20deg)}65%{transform:scale(1.22)}100%{transform:scale(1) rotate(0)}}
+
+/* Full-screen treasure reveal */
+.overlay.treasure-theater{padding:0;background:#090a20;backdrop-filter:none}
+.treasure-theater .dialog{width:100%;height:100%;max-height:none;padding:0;border-radius:0;background:transparent;box-shadow:none;overflow:hidden;animation:none}
+.treasure-theater .dialog>.x{z-index:2;top:max(14px,env(safe-area-inset-top));background:#211e3d;color:white}
+.treasure-reveal{position:relative;isolation:isolate;display:grid;grid-template:minmax(0,1fr)/minmax(0,1fr);place-items:center;height:100%;overflow:hidden;color:#fff;text-align:center;background:radial-gradient(ellipse at center,#33204e,#0b102b 60%,#090a20)}
+.treasure-reveal__ring,.treasure-reveal__wave,.treasure-reveal__art,.treasure-reveal__seal,.treasure-reveal__rays{grid-area:1/1;pointer-events:none}
+.treasure-reveal__ring,.treasure-reveal__wave{width:min(74vw,52vh,390px);aspect-ratio:1;border:1px solid #ffda83;border-radius:50%;box-shadow:0 0 20px #ffce83,inset 0 0 20px #ffce8366}
+.treasure-reveal__ring{border-style:dashed;outline:1px solid #ffda8355;outline-offset:12px;animation:treasure-ring 1.45s ease-in both}
+.treasure-reveal__wave{animation:treasure-wave .8s 1.38s ease-out both}
+.treasure-reveal__rays{width:min(160vw,1050px);aspect-ratio:1;background:repeating-conic-gradient(from 22deg,transparent 0 14deg,#ffe4a138 16deg,transparent 29deg);mask-image:radial-gradient(circle,black,transparent 67%);animation:treasure-rays 1.45s 1.38s ease-out both}
+.treasure-reveal__seal{width:min(42vw,32vh,230px);overflow:visible;filter:drop-shadow(0 0 12px #ffbc63);animation:treasure-seal 1.53s ease-in both}
+.treasure-reveal__crack{stroke-dasharray:230;animation:treasure-crack .7s .53s ease-in both}
+.treasure-reveal__art{position:relative;display:grid;place-items:center;width:min(85vw,59vh,490px);height:min(53vh,490px);padding:10px;overflow:hidden;border-radius:22px;background:radial-gradient(circle,var(--treasure-color),#1c1534 72%);border:2px solid #ffdc8d;box-shadow:0 0 35px #ffbf5270;animation:treasure-art 2.75s ease-out both}
+.treasure-reveal__art img{width:100%;height:100%;object-fit:contain;min-height:0}
+.treasure-reveal__art .emoji{font-size:clamp(64px,19vw,150px)}
+.treasure-reveal__art::after{content:'';position:absolute;inset:0;background:linear-gradient(119deg,transparent 35%,#ffecba9c 50%,transparent 65%);animation:treasure-sweep .78s 1.4s ease-out both}
+.treasure-reveal__title{position:absolute;top:calc(50% + min(28vh,260px));left:0;right:0;margin:0;padding:0 20px;font-size:clamp(23px,7vw,42px);color:#ffebba;text-shadow:0 3px 14px #040311;animation:treasure-title .32s 2.04s ease-out both}
+.treasure-reveal__title small{display:block;margin-top:3px;font-size:.51em;color:white}
+.treasure-reveal__skip{position:absolute;bottom:max(15px,env(safe-area-inset-bottom));z-index:1}
+.v30-result-kicker.treasure-first-stamp{display:inline-block;padding:5px 12px;border:2px solid #b77920;border-radius:7px;background:#fff1c3;color:#754709;letter-spacing:1px;transform:rotate(-5deg);animation:treasure-stamp .34s ease-out both}
+@keyframes treasure-ring{0%{opacity:0;transform:scale(1.7) rotate(-28deg)}45%,87%{opacity:.88}100%{opacity:0;transform:scale(.54) rotate(15deg)}}
+@keyframes treasure-seal{0%{opacity:0;transform:scale(.68)}27%,84%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.18)}}
+@keyframes treasure-crack{from{stroke-dashoffset:230}to{stroke-dashoffset:0}}
+@keyframes treasure-wave{from{opacity:.95;transform:scale(.27)}to{opacity:0;transform:scale(2.3)}}
+@keyframes treasure-rays{0%{opacity:0;transform:scale(.2)}25%{opacity:.9}100%{opacity:.4;transform:scale(1.23) rotate(19deg)}}
+@keyframes treasure-art{0%,27%{opacity:0;transform:scale(.79);filter:brightness(.12)}36%,49%{opacity:.65;transform:scale(.89);filter:brightness(.22)}56%{opacity:1;transform:scale(1.05);filter:brightness(1.13)}72%,100%{opacity:1;transform:scale(1);filter:none}}
+@keyframes treasure-sweep{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+@keyframes treasure-title{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes treasure-stamp{from{opacity:0;transform:rotate(-11deg) scale(1.65)}to{opacity:1;transform:rotate(-5deg) scale(1)}}
+@media (prefers-reduced-motion:reduce){.v30-result-kicker.treasure-first-stamp,.v30-result-card:before,.v30-progress-track>span{animation:none}}
 /* 2. Ten existing miss types now have independent motion and ambience */
 .v30-miss-scene,.v30-miss-result{position:relative;isolation:isolate;overflow:hidden;border-radius:20px;padding:12px}
 .v30-miss-scene{background:linear-gradient(140deg,#f7f5ff,#fff);text-align:center}
@@ -1786,6 +1800,9 @@ function playSfx(type){
    tap:{n:[520],dur:.065,amp:.026,wave:'sine',gap:.065},
    card:{n:[440,660],dur:.075,amp:.024,wave:'triangle',gap:.07},
    scan:{n:[780,1140],dur:.095,amp:.06,wave:'sine',gap:.065},
+   seal:{n:[147,196,294],dur:.39,amp:.052,wave:'triangle',gap:.24},
+   impact:{n:[82,392,659,1047],dur:.27,amp:.074,wave:'triangle',gap:.085},
+   stamp:{n:[123,659],dur:.18,amp:.067,wave:'triangle',gap:.075},
    chest:{n:[294,392,587],dur:.22,amp:.042,wave:'triangle',gap:.13},
    treasure:{n:[523,659,784,1047],dur:.19,amp:.065,wave:'sine',gap:.09},
    first:{n:[392,523,659,784,1047,1318],dur:.25,amp:.07,wave:'sine',gap:.095},
@@ -1822,35 +1839,76 @@ function showMiss(m,unlocked=false,ctx=state.missContext){
  showDialog(`<div class="v30-miss-result v30-miss-${kind}"><div class="eyebrow">BETTER LUCK NEXT TIME</div><div class="row space"><span class="miss-tag">🤡 꽝 · ${effectLabel(kind)}</span><small class="tiny">탐험 ${ctx?.total||seenIds().length} / 80</small></div><div class="result-art ${style} v30-miss-art"><div class="v30-miss-effects" aria-hidden="true">${kind==='think'?'◇ ✧ ◇':kind==='prank'||kind==='bait'?'🎊 ✦ 🎊':kind==='funny'?'✦ 🤡 ✦':'✧ ✦ ✧'}</div>${imagePreview(m)}</div><h2 class="result-title">${caption}</h2><p class="result-description">${escapeHTML(message)}</p><div class="note" style="text-align:center">🧭 탐험한 QR <b>${ctx?.total||seenIds().length}/80</b> · 연속 꽝 <b>${ctx?.streak||0}</b>회</div><div class="row" style="margin-top:14px"><button class="btn white" data-close style="flex:1">도감으로</button><button class="btn main" id="reScan" style="flex:1">📷 다음 QR 찾기</button></div></div>`);
  $('#reScan').onclick=openScanner;
 }
-function showTreasureResult(t,first,duplicate,previousCount){
- const now=progressCount(),milestone=!duplicate&&[3,6,9,12].includes(now),complete=!duplicate&&now===12;
+function showTreasureResult(t,first,duplicate,preview=false){
+ const now=preview?1:progressCount(),milestone=!duplicate&&[3,6,9,12].includes(now),complete=!duplicate&&now===12;
  const badgeTitle={3:'초보 탐험가',6:'보물 수집가',9:'전설을 향해',12:'전설의 탐험가'}[now]||'';
  const badgeEmoji={3:'🧭',6:'🗝️',9:'👑',12:'🏆'}[now]||'✦';
- const subtitle=first?'FIRST DISCOVERY':duplicate?'ALREADY COLLECTED':complete?'COLLECTION COMPLETE':'TREASURE UNLOCKED';
- const body=`<div class="v30-result-shell ${first?'v30-first-result':''} ${complete?'v30-complete-result':''}"><span class="v30-result-kicker">${subtitle}</span>
+ const subtitle=first?'최초 발견':duplicate?'ALREADY COLLECTED':complete?'COLLECTION COMPLETE':'TREASURE UNLOCKED';
+ const body=`<div class="v30-result-shell ${first?'v30-first-result':''} ${complete?'v30-complete-result':''}"><span class="v30-result-kicker${first?' treasure-first-stamp':''}">${subtitle}</span>
  <div class="v30-result-card" style="--v30-accent:${cleanColor(t.color)}"><span class="v30-result-sigil" aria-hidden="true">✦</span><div class="v30-result-image">${imagePreview(t)}</div><span class="v30-result-corner" aria-hidden="true">✧ ✦ ✧</span></div>
- <h2 class="result-title">${first?'👑 최초 발견 성공!':duplicate?'이미 수집한 보물!':complete?'🏆 도감 12종 완성!':'💎 새로운 보물 발견!'}</h2>
+ <h2 class="result-title">${duplicate?'이미 수집한 보물!':complete?'🏆 도감 12종 완성!':'💎 보물 발견!'}</h2>
  <p class="result-description"><b>${escapeHTML(t.name)}</b><br>${escapeHTML(t.description)}</p>
  <div class="v30-result-progress"><div><span>보물도감 수집 현황</span><strong>${now}<small> / 12</small></strong></div><div class="v30-progress-track"><span style="width:${Math.round(now/12*100)}%"></span></div></div>
- ${first?'<div class="v30-first-message">🥇 이 보물을 가장 먼저 발견했어요!</div>':''}
+ ${first?'<div class="v30-first-message">🥇 이 보물을 가장 먼저 발견했어요!<br>상품 수령 시 행사 진행자에게 이 화면을 보여 주세요.</div>':''}
  ${milestone?`<div class="v30-milestone" role="status"><span>${badgeEmoji}</span><div><small>COLLECTION MILESTONE</small><strong>${now}개 달성 · ${badgeTitle}</strong></div></div>`:''}
  ${duplicate?'<div class="note">이 보물은 이미 도감에 등록되어 있어요. 다른 QR을 찾아보세요!</div>':''}
  ${complete?'<button class="btn sun block v28-finish-link" id="openFinishCard">🏆 도감 완성 기념 카드 보기</button>':''}
- <div class="row" style="margin-top:15px"><button class="btn white" style="flex:1" data-close>도감 보기</button><button class="btn main" style="flex:1" id="reScan">📷 다음 QR 찾기</button></div></div>`;
- const showFinal=()=>{const stage=$('#treasureRevealStage');if(!stage)return;stage.outerHTML=body;$('#reScan')?.addEventListener('click',openScanner);$('#openFinishCard')?.addEventListener('click',showCompletionCard);$$('[data-close]',document).forEach(btn=>{if(btn.closest('.dialog'))btn.addEventListener('click',hideDialog)});if(!duplicate){confetti(complete?70:first?55:milestone?39:23);if(milestone)playSfx('milestone')}};
- if(duplicate){playSfx('card');showDialog(`<div id="treasureRevealStage"></div>`);showFinal();return}
- showDialog(`<div class="v30-reveal-stage ${first?'is-first':''} ${complete?'is-complete':''}" id="treasureRevealStage">
- <div class="v30-reveal-flash" aria-hidden="true"></div><span class="v30-reveal-label">${first?'👑 FIRST DISCOVERY':complete?'✨ COLLECTION COMPLETE':'✦ TREASURE FOUND'}</span>
- <div class="v30-reveal-orbit" aria-hidden="true"><div class="v30-reveal-rune">✧ ✦ ✧</div></div>
- <div class="v30-reveal-chest" aria-hidden="true"><span class="v30-chest-lid">✨</span><span>🎁</span><span class="v30-chest-light"></span></div>
- <p class="v30-reveal-caption">${first?'전설적인 최초 발견!':complete?'마지막 보물을 획득했어요!':'새로운 보물이 모습을 드러냅니다'}</p>
- <button class="v30-skip" id="skipReveal" type="button">연출 건너뛰기 →</button></div>`);
- playSfx('chest');buzz(first?[40,35,70]:45);
- let ended=false;const finish=()=>{if(ended||!$('#treasureRevealStage'))return;ended=true;playSfx(complete?'complete':first?'first':'treasure');showFinal()};
- $('#skipReveal').onclick=finish;
- setTimeout(finish,matchMedia('(prefers-reduced-motion: reduce)').matches?80:complete||first?1550:1200);
+ ${preview?'<button class="btn white block" data-close>미리보기 닫기</button>':'<div class="row" style="margin-top:15px"><button class="btn white" style="flex:1" data-close>도감 보기</button><button class="btn main" style="flex:1" id="reScan">📷 다음 QR 찾기</button></div>'}</div>`;
+ const bindResult=()=>{
+  $('#reScan')?.addEventListener('click',openScanner);
+  $('#openFinishCard')?.addEventListener('click',showCompletionCard);
+ };
+
+ if(duplicate||matchMedia('(prefers-reduced-motion: reduce)').matches){
+  showDialog(body);bindResult();
+  if(duplicate)playSfx('card');
+  return;
+ }
+ const image=imageSrc(t.image);
+ showDialog(`<div class="treasure-reveal" id="treasureRevealStage" style="--treasure-color:${cleanColor(t.color)}">
+  <div class="treasure-reveal__ring" aria-hidden="true"></div>
+  <div class="treasure-reveal__rays" aria-hidden="true"></div>
+  <div class="treasure-reveal__art" aria-hidden="true">${image?`<img src="${escapeHTML(image)}" alt="" decoding="async" fetchpriority="high">`:`<span class="emoji">${escapeHTML(t.emoji||'💎')}</span>`}</div>
+  <svg class="treasure-reveal__seal" viewBox="0 0 200 200" aria-hidden="true">
+   <circle cx="100" cy="100" r="88" fill="#211631" stroke="#f7cf84" stroke-width="2"/>
+   <circle cx="100" cy="100" r="76" fill="none" stroke="#ac7d54"/>
+   <path d="M100 28L167 100 100 172 33 100Z M100 56L140 100 100 144 60 100Z" fill="none" stroke="#f7cf84" stroke-width="2"/>
+   <path class="treasure-reveal__crack" d="M124 18L91 73 113 90 78 125 92 139 63 179" fill="none" stroke="#fff0ad" stroke-width="4" stroke-linejoin="round"/>
+  </svg>
+  <div class="treasure-reveal__wave" aria-hidden="true"></div>
+  <h2 class="treasure-reveal__title">보물 발견!<small>${escapeHTML(t.name)}</small></h2>
+  <button class="v30-skip treasure-reveal__skip" id="skipReveal" type="button">연출 건너뛰기 →</button>
+ </div>`);
+ const stage=$('#treasureRevealStage'),overlay=stage.closest('.overlay');
+ overlay.classList.add('treasure-theater');
+ const art=stage.querySelector('img');
+ const fallback=()=>{const icon=document.createElement('span');icon.className='emoji';icon.textContent=t.emoji||'💎';art.replaceWith(icon)};
+ if(art){if(art.complete&&!art.naturalWidth)fallback();else art.addEventListener('error',fallback,{once:true})}
+ playSfx('seal');
+ const impact=setTimeout(()=>{
+  if(!stage.isConnected)return;
+  playSfx('impact');buzz(65);
+ },1400);
+ const finish=()=>{
+  clearTimeout(impact);
+  if(!stage.isConnected)return;
+  showDialog(body);bindResult();
+  confetti(complete?70:first?55:39);
+  if(first)playSfx('stamp');
+  else if(complete)playSfx('complete');
+  else if(milestone)playSfx('milestone');
+ };
+ const timer=setTimeout(finish,3050);
+ $('#skipReveal').onclick=()=>{clearTimeout(timer);finish()};
 }
-function showAdminQrPreview(q){const t=data.treasures.find(x=>x.id===q.treasureId),m=q.memeId==='random'?data.memes[0]:data.memes.find(x=>x.id===q.memeId);let item=q.kind==='treasure'?t:m;showDialog(`<div class="eyebrow">NO-RECORD PREVIEW · ${escapeHTML(q.id)}</div><h2 class="h2">📱 학생 화면 미리보기</h2><div class="note">테스트 미리보기는 참여 기록이나 최초 발견자를 변경하지 않습니다.</div><div class="phone-preview"><div class="tiny">학생자치회 보물찾기</div><div class="result-art ${q.kind==='miss'?'miss-funny':''}" style="background:${q.kind==='treasure'?cleanColor(t?.color):'#e7f0ee'}">${imagePreview(item||{emoji:'?'})}</div><div class="result-title">${q.kind==='treasure'?'🎉 보물 발견!':'🤡 꽝!'}</div><p class="result-description">${escapeHTML(q.kind==='treasure'?t?.name||'미지정':m?.text||'랜덤 꽝')}</p></div><button class="btn light block" data-close>확인</button>`)}
+function showAdminQrPreview(q){const t=data.treasures.find(x=>x.id===q.treasureId),m=q.memeId==='random'?data.memes[0]:data.memes.find(x=>x.id===q.memeId);let item=q.kind==='treasure'?t:m;
+ if(t&&q.kind==='treasure'){
+  showDialog(`<div class="eyebrow">학생 화면 미리보기</div><h2 class="h2">${escapeHTML(t.name)}</h2><p class="note">미리보기는 참여 기록이나 최초 발견자를 변경하지 않습니다.</p><button class="btn main block" id="previewTreasure">보물 발견 연출</button><button class="btn sun block" id="previewFirst" style="margin-top:8px">최초 발견 연출</button></div>`);
+  $('#previewTreasure').onclick=()=>showTreasureResult(t,false,false,true);
+  $('#previewFirst').onclick=()=>showTreasureResult(t,true,false,true);
+  return;
+ }
+ showDialog(`<div class="eyebrow">NO-RECORD PREVIEW · ${escapeHTML(q.id)}</div><h2 class="h2">📱 학생 화면 미리보기</h2><div class="note">테스트 미리보기는 참여 기록이나 최초 발견자를 변경하지 않습니다.</div><div class="phone-preview"><div class="tiny">학생자치회 보물찾기</div><div class="result-art ${q.kind==='miss'?'miss-funny':''}" style="background:${q.kind==='treasure'?cleanColor(t?.color):'#e7f0ee'}">${imagePreview(item||{emoji:'?'})}</div><div class="result-title">${q.kind==='treasure'?'🎉 보물 발견!':'🤡 꽝!'}</div><p class="result-description">${escapeHTML(q.kind==='treasure'?t?.name||'미지정':m?.text||'랜덤 꽝')}</p></div><button class="btn light block" data-close>확인</button>`)}
 async function swapQrContents(firstId,secondId){if(firstId===secondId)return;const a=data.qrs.find(x=>x.id===firstId),b=data.qrs.find(x=>x.id===secondId);if(!a||!b)return;const keys=['kind','treasureId','memeId'];let ac={},bc={};for(const k of keys){ac[k]=b[k];bc[k]=a[k]}const aa={...a,...ac},bb={...b,...bc};if(!importantQrChange(`${firstId} ↔ ${secondId} 교환`))return;try{await batchSaveEntities('qrs',[aa,bb]);Object.assign(a,ac);Object.assign(b,bc);saveLocal();state.swapSelected=null;await recordQrChange(`${firstId} ↔ ${secondId} 콘텐츠 교환`);render();toast(`${firstId} ↔ ${secondId} 콘텐츠를 교환했어요. QR 주소와 위치는 그대로예요.`)}catch(err){toast('교환 실패: '+err.message)}}
 
 function render(){ $('#modeChip').textContent=modeLabel();$('#brandTitle').textContent=data.settings?.eventName||'시크릿 보물찾기';const root=$('#app');let html='';if(state.view==='admin')html=renderAdmin();else if(!state.participant)html=renderWelcome();else html=renderHome();root.innerHTML=html;root.classList.remove('v30-page-enter');void root.offsetWidth;root.classList.add('v30-page-enter');bind();if(state.view==='admin'&&state.adminTab==='print')renderQrPreview(); $('#soundToggle').textContent=state.soundEnabled?'🔊':'🔇';}
@@ -1996,7 +2054,7 @@ async function handleScan(raw){
   catch(e){showDialog(`<h2 class="h2">⚠️ 서버 확인 실패</h2><p>${escapeHTML(e.message||'인터넷 연결을 확인하세요.')}</p><button class="btn white block" data-close>닫기</button>`);return}
  }
  if(phase()!=='running'){showDialog(`<div class="result-icon">${phase()==='preparing'?'🔒':phase()==='paused'?'⏸️':'🏁'}</div><h2 class="result-title">${phase()==='preparing'?'행사 준비 중이에요':phase()==='paused'?'행사가 일시 중지되었어요':'행사가 종료되었어요'}</h2><p class="result-description">${phase()==='preparing'?'행사 시작 후 QR을 다시 인식해 주세요.':phase()==='paused'?'안전 점검 중입니다. 재개 이후 다시 인식해 주세요.':'보물도감과 탐험 기록은 계속 확인할 수 있어요.'}</p><button class="btn white block" data-close>확인</button>`);return}
- const p=state.participant,isMiss=q.kind==='miss';let first=false,duplicate=false,ctx=null,t=null,previousCount=progressCount();
+ const p=state.participant,isMiss=q.kind==='miss';let first=false,duplicate=false,ctx=null,t=null;
  try{
   if(F.enabled){
    const fs=F.lib.fs,ref=fs.doc(F.db,'players',p.id),firstRef=isMiss?null:fs.doc(F.db,'firstFinds',q.treasureId);
@@ -2022,7 +2080,7 @@ async function handleScan(raw){
  }catch(err){showDialog(`<div class="result-icon">⚠️</div><h2 class="result-title">기록을 저장하지 못했어요</h2><p class="result-description">${escapeHTML(err.message||'네트워크 상태를 확인해 주세요.')}<br>저장이 확인되기 전에는 기록이 추가되지 않습니다.</p><button class="btn main block" id="retryScan">다시 시도</button>`);$('#retryScan').onclick=()=>{hideDialog();handleScan(code)};return}
  state.missContext=ctx;render();
  if(isMiss){const m=q.memeId==='random'?data.memes[Math.floor(Math.random()*data.memes.length)]:data.memes.find(x=>x.id===q.memeId)||data.memes[0];showMiss(m,false,ctx)}
- else{t=data.treasures.find(x=>x.id===q.treasureId);if(!t){toast('보물 설정에 오류가 있습니다.');return}showTreasureResult(t,first,duplicate,previousCount)}
+ else{t=data.treasures.find(x=>x.id===q.treasureId);if(!t){toast('보물 설정에 오류가 있습니다.');return}showTreasureResult(t,first,duplicate)}
  saveCollectionCache(p);
 }finally{state.recordingCode=null;}
 }
@@ -2045,13 +2103,13 @@ function renderOverview(){
  <div class="panel"><h2 class="h2">💎 보물 발견 현황</h2><p class="tiny">수집한 학생 수가 적은 보물 순으로 표시돼요.</p>${stats.least.map(t=>`<div class="rank-row"><span>${escapeHTML(t.emoji)} ${escapeHTML(t.name)}</span><strong>${t.n}명</strong></div>`).join('')}</div></div>
  <div class="section panel"><div class="row space"><h2 class="h2">🕒 최근 보물 획득</h2><button class="btn light small" id="refreshOverview">🔄 새로고침</button></div>${stats.latest.length?`<div class="list-wrap"><table class="data-table"><thead><tr><th>학생</th><th>최근 보물</th><th>획득 시각</th></tr></thead><tbody>${stats.latest.map(p=>`<tr><td>${escapeHTML(fullName(p))}</td><td>${escapeHTML(data.treasures.find(t=>t.id===p.lastTreasureId)?.name||p.lastTreasureId)}</td><td>${escapeHTML(foundTime(p.lastTreasureAt))}</td></tr>`).join('')}</tbody></table></div>`:'<p class="muted">아직 보물 획득 기록이 없어요.</p>'}<p class="tiny">학생별 마지막 보물 획득 1건만 표시합니다.</p></div>
  <div class="section panel"><h2 class="h2">🏆 보물별 최초 발견자</h2><div class="list-wrap"><table class="data-table"><thead><tr><th>보물</th><th>최초 발견자</th><th>QR</th></tr></thead><tbody>${data.treasures.map(t=>{const f=data.firstFinds[t.id],p=f?participants.find(x=>x.id===f.playerId):null;return `<tr><td>${escapeHTML(t.emoji)} ${escapeHTML(t.name)}</td><td>${f?escapeHTML(p?fullName(p):`${f.grade}학년 ${f.className}반 ${f.publicName||maskName(f.name)}`):'<span class="muted">아직 없음</span>'}</td><td>${f?escapeHTML(f.qrId||'-'):'-'}</td></tr>`}).join('')}</tbody></table></div></div>
- <div class="section panel"><div class="row space"><div><h2 class="h2">👥 학생별 탐험 현황</h2><p class="tiny">학년·반·이름으로 검색하고 수집 개수나 최초 발견 순서로 정렬할 수 있어요.</p></div><button class="btn white small" id="exportParticipants">⬇ CSV 다운로드</button></div><div class="v29-players-filters"><label>학생 검색<input type="search" id="playerSearch" placeholder="이름 또는 번호 검색" value="${escapeHTML(state.playerFilters.search)}"></label><label>학년<select id="playerGrade"><option value="all">전체</option>${[1,2,3].map(n=>`<option value="${n}" ${state.playerFilters.grade===String(n)?'selected':''}>${n}학년</option>`).join('')}</select></label><label>반<select id="playerClass"><option value="all">전체</option>${Array.from(new Set(participants.map(p=>String(p.className)))).filter(Boolean).sort((a,b)=>Number(a)-Number(b)).map(n=>`<option value="${escapeHTML(n)}" ${state.playerFilters.className===n?'selected':''}>${escapeHTML(n)}반</option>`).join('')}</select></label><label>도감<select id="playerComplete"><option value="all">전체</option><option value="done" ${state.playerFilters.complete==='done'?'selected':''}>12종 완성</option><option value="not" ${state.playerFilters.complete==='not'?'selected':''}>미완성</option></select></label><label>정렬<select id="playerOrder"><option value="class" ${state.playerFilters.order==='class'?'selected':''}>학년·반·번호순</option><option value="treasures" ${state.playerFilters.order==='treasures'?'selected':''}>보물 많은 순</option><option value="firsts" ${state.playerFilters.order==='firsts'?'selected':''}>최초 발견 많은 순</option></select></label></div>${renderFilteredPlayers(participants)}</div>`;
+ <div class="section panel"><div class="row space"><div><h2 class="h2">👥 학생별 탐험 현황</h2><p class="tiny">테스트 학생을 검색한 뒤 해당 행의 삭제 버튼으로 참가 정보와 탐험 기록을 지울 수 있어요.</p></div><button class="btn white small" id="exportParticipants">⬇ CSV 다운로드</button></div><div class="v29-players-filters"><label>학생 검색<input type="search" id="playerSearch" placeholder="이름 또는 번호 검색" value="${escapeHTML(state.playerFilters.search)}"></label><label>학년<select id="playerGrade"><option value="all">전체</option>${[1,2,3].map(n=>`<option value="${n}" ${state.playerFilters.grade===String(n)?'selected':''}>${n}학년</option>`).join('')}</select></label><label>반<select id="playerClass"><option value="all">전체</option>${Array.from(new Set(participants.map(p=>String(p.className)))).filter(Boolean).sort((a,b)=>Number(a)-Number(b)).map(n=>`<option value="${escapeHTML(n)}" ${state.playerFilters.className===n?'selected':''}>${escapeHTML(n)}반</option>`).join('')}</select></label><label>도감<select id="playerComplete"><option value="all">전체</option><option value="done" ${state.playerFilters.complete==='done'?'selected':''}>12종 완성</option><option value="not" ${state.playerFilters.complete==='not'?'selected':''}>미완성</option></select></label><label>정렬<select id="playerOrder"><option value="class" ${state.playerFilters.order==='class'?'selected':''}>학년·반·번호순</option><option value="treasures" ${state.playerFilters.order==='treasures'?'selected':''}>보물 많은 순</option><option value="firsts" ${state.playerFilters.order==='firsts'?'selected':''}>최초 발견 많은 순</option></select></label></div>${renderFilteredPlayers(participants)}</div>`;
 }
 function qrWarnings(){let ts=data.qrs.filter(x=>x.kind==='treasure'),ids=ts.map(x=>x.treasureId);let invalid=ids.filter(x=>!data.treasures.some(t=>t.id===x));let duplicates=ids.filter((x,i)=>ids.indexOf(x)!==i);if(ts.length!==12||invalid.length||duplicates.length)return `<div class="note danger">⚠️ 현재 보물 QR ${ts.length}개 · ${duplicates.length?`중복 보물 ${duplicates.join(', ')}. `:''}${invalid.length?'알 수 없는 보물 포함. ':''}권장 설정은 서로 다른 보물 12개예요.</div>`;return `<div class="note">✅ 보물 12종이 서로 다른 QR에 정확히 한 개씩 배치되어 있어요.</div>`}
 function importantQrChange(message){return phase()==='running'||phase()==='paused'?confirm('⚠️ 행사 진행 중 QR 설정 변경\n이미 수집한 도감은 자동으로 취소되지 않습니다.\n\n변경: '+message+'\n\n계속하시겠습니까?'):true}
 async function recordQrChange(action){const entry={at:Date.now(),action:String(action).slice(0,140)};try{if(F.enabled){if(!F.adminUser)throw Error('관리자 로그인이 필요합니다.');const fs=F.lib.fs,ref=fs.doc(F.adminDb,'settings','app');let history=[];await fs.runTransaction(F.adminDb,async tx=>{const snap=await tx.get(ref),items=Array.isArray(snap.data()?.qrEditLog)?snap.data().qrEditLog:[];history=[entry,...items].slice(0,60);tx.set(ref,{qrEditLog:history},{merge:true})});data.settings.qrEditLog=history;}else{data.settings.qrEditLog=[entry,...(data.settings.qrEditLog||[])].slice(0,60);saveLocal();}}catch(err){console.warn('QR 변경 기록 저장 실패',err);toast('QR은 변경됐지만 변경 기록 저장에 실패했어요. 설정에서 확인해 주세요.')}}
 function renderQrLog(){const entries=(data.settings.qrEditLog||[]).slice(0,15);return `<div class="section panel"><h3 class="h3">📝 최근 QR 설정 변경 기록</h3><p class="tiny">QR 배치 변경 이력을 최근 60건까지 저장하며, 여기서는 최근 15건만 표시해요. 설치 장소 정보는 기록하지 않습니다.</p>${entries.length?`<div class="v29-audit-log">${entries.map(e=>`<div><span>${escapeHTML(new Date(e.at).toLocaleString('ko-KR'))}</span><strong>${escapeHTML(e.action)}</strong></div>`).join('')}</div>`:'<div class="empty">아직 변경 기록이 없어요.</div>'}</div>`}
-function renderFilteredPlayers(participants){const f=state.playerFilters||{},text=(f.search||'').trim().toLowerCase(),firstCounts={};Object.values(data.firstFinds||{}).forEach(v=>{if(v.playerId)firstCounts[v.playerId]=(firstCounts[v.playerId]||0)+1});let rows=participants.filter(p=>(!text||[p.name,p.studentNumber,String(p.grade)+'-'+p.className].some(v=>String(v||'').toLowerCase().includes(text)))&&(f.grade==='all'||String(p.grade)===f.grade)&&(f.className==='all'||String(p.className)===f.className)&&(f.complete==='all'||(f.complete==='done'?(p.collectedIds||[]).length===12:(p.collectedIds||[]).length<12)));rows.sort((a,b)=>{if(f.order==='treasures')return (b.collectedIds||[]).length-(a.collectedIds||[]).length||Number(a.grade)-Number(b.grade);if(f.order==='firsts')return (firstCounts[b.id]||0)-(firstCounts[a.id]||0)||Number(a.grade)-Number(b.grade);return Number(a.grade)-Number(b.grade)||Number(a.className)-Number(b.className)||Number(a.studentNumber||999)-Number(b.studentNumber||999)||a.name.localeCompare(b.name,'ko')});return `<div class="v29-results-count">검색 결과 <strong>${rows.length}</strong>명 / 전체 ${participants.length}명</div>${rows.length?`<div class="list-wrap"><table class="data-table"><thead><tr><th>학년</th><th>반</th><th>번호</th><th>이름</th><th>보물</th><th>최초 발견</th><th>탐험 QR</th><th>꽝 누적</th></tr></thead><tbody>${rows.map(p=>`<tr><td>${escapeHTML(p.grade)}</td><td>${escapeHTML(p.className)}</td><td>${escapeHTML(p.studentNumber||'-')}</td><td>${escapeHTML(p.name)}</td><td><b>${(p.collectedIds||[]).length}/12</b></td><td>${firstCounts[p.id]||0}개</td><td>${seenIds(p).length}/80</td><td>${Number(p.missTotal||0)}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">해당 조건에 맞는 학생이 없어요.</div>'}`}
+function renderFilteredPlayers(participants){const f=state.playerFilters||{},text=(f.search||'').trim().toLowerCase(),firstCounts={};Object.values(data.firstFinds||{}).forEach(v=>{if(v.playerId)firstCounts[v.playerId]=(firstCounts[v.playerId]||0)+1});let rows=participants.filter(p=>(!text||[p.name,p.studentNumber,String(p.grade)+'-'+p.className].some(v=>String(v||'').toLowerCase().includes(text)))&&(f.grade==='all'||String(p.grade)===f.grade)&&(f.className==='all'||String(p.className)===f.className)&&(f.complete==='all'||(f.complete==='done'?(p.collectedIds||[]).length===12:(p.collectedIds||[]).length<12)));rows.sort((a,b)=>{if(f.order==='treasures')return (b.collectedIds||[]).length-(a.collectedIds||[]).length||Number(a.grade)-Number(b.grade);if(f.order==='firsts')return (firstCounts[b.id]||0)-(firstCounts[a.id]||0)||Number(a.grade)-Number(b.grade);return Number(a.grade)-Number(b.grade)||Number(a.className)-Number(b.className)||Number(a.studentNumber||999)-Number(b.studentNumber||999)||a.name.localeCompare(b.name,'ko')});return `<div class="v29-results-count">검색 결과 <strong>${rows.length}</strong>명 / 전체 ${participants.length}명</div>${rows.length?`<div class="list-wrap"><table class="data-table"><thead><tr><th>학년</th><th>반</th><th>번호</th><th>이름</th><th>보물</th><th>최초 발견</th><th>탐험 QR</th><th>꽝 누적</th><th>관리</th></tr></thead><tbody>${rows.map(p=>`<tr><td>${escapeHTML(p.grade)}</td><td>${escapeHTML(p.className)}</td><td>${escapeHTML(p.studentNumber||'-')}</td><td>${escapeHTML(p.name)}</td><td><b>${(p.collectedIds||[]).length}/12</b></td><td>${firstCounts[p.id]||0}개</td><td>${seenIds(p).length}/80</td><td>${Number(p.missTotal||0)}</td><td><button type="button" class="btn danger small" data-delete-player="${escapeHTML(p.id)}" aria-label="${escapeHTML(fullName(p))} 기록 삭제" ${state.deletingPlayer?'disabled':''}>삭제</button></td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">해당 조건에 맞는 학생이 없어요.</div>'}`}
 function auditPrintQuick(){const check=[];const push=(label,ok,note='')=>check.push({label,ok,note});const qrs=data.qrs||[],treasure=qrs.filter(q=>q.kind==='treasure'),codes=qrs.map(q=>String(q.code||'').toUpperCase());push('QR 80개 등록',qrs.length===80,`${qrs.length}개`);push('보물 12종 정확히 배치',treasure.length===12&&new Set(treasure.map(q=>q.treasureId)).size===12&&data.treasures.every(t=>treasure.some(q=>q.treasureId===t.id)),`${treasure.length}개`);push('6자리 코드 형식 및 중복 검사',codes.length===80&&new Set(codes).size===80&&codes.every(c=>/^[A-Z0-9]{6}$/.test(c)),'영문·숫자 6자리');const goodUrl=location.protocol==='https:'&&!['localhost','127.0.0.1'].includes(location.hostname)&&qrs.every(q=>{try{const u=new URL(qrUrl(q));return u.host===location.host&&u.searchParams.get('qr')===q.code}catch{return false}});push('현재 배포 주소(HTTPS)와 QR 링크',goodUrl,location.origin);push('Firebase 연결',F.enabled&&F.ready&&F.seeded&&!F.error,F.enabled?'실제 서버 연결 여부':'체험 모드에서는 점검 실패');return check}
 function renderPrintAudit(){const results=state.printAudit||auditPrintQuick();return `<div class="v29-audit-items">${results.map(r=>`<div class="${r.ok?'pass':'fail'}"><b>${r.ok?'✓':'!'} ${escapeHTML(r.label)}</b><span>${escapeHTML(r.note||'')}</span></div>`).join('')}</div><p class="tiny">이미지 로딩은 ‘점검 실행’을 눌러 확인할 수 있어요. 브라우저 파일 열기 상태에서는 HTTPS 주소 점검이 실패합니다.</p>`}
 async function auditAllImages(){if(state.printAuditBusy)return;state.printAuditBusy=true;state.printAudit=null;render();const checks=auditPrintQuick();const files=[...data.treasures,...data.memes].filter(item=>imageSrc(item.image));const result=await Promise.all(files.map(item=>new Promise(resolve=>{const img=new Image();let done=false;const finish=(ok)=>{if(done)return;done=true;clearTimeout(timer);img.onload=img.onerror=null;resolve(ok)};const timer=setTimeout(()=>finish(false),5500);img.onload=()=>finish(true);img.onerror=()=>finish(false);img.src=imageSrc(item.image)})));let goodQr=0;for(const q of data.qrs){try{const canvas=qrCanvas(qrUrl(q),64);if(canvas.width===64&&canvas.height===64)goodQr++;}catch(e){console.warn('QR 생성 실패',q.id,e)}}checks.push({label:'실제 QR 이미지 80개 생성',ok:goodQr===80,note:`정상 ${goodQr}/80개`});checks.push({label:'등록된 이미지 로딩',ok:result.every(Boolean),note:`정상 ${result.filter(Boolean).length}/${files.length}개`});state.printAudit=checks;state.printAuditBusy=false;render();toast(checks.every(c=>c.ok)?'✅ 인쇄 점검 완료!':'⚠️ 일부 점검 항목을 확인해 주세요.')}
@@ -2062,7 +2120,7 @@ function renderMemeAdmin(){return `<div class="row space"><div><h2 class="h2">�
 <div class="v29-bulk-callout"><div><strong>🤡 꽝 이미지 여러 개 추가</strong><p>이미지를 여러 개 선택하면 새 꽝 콘텐츠로 등록돼요. 기존 꽝은 그대로 유지됩니다.</p></div><button type="button" class="btn main" id="bulkMeme">📤 꽝 일괄 추가</button></div><div class="admin-edit-grid">${data.memes.map(m=>`<div class="edit-card"><div class="head"><div class="avatar">${m.image?`<img src="${escapeHTML(imageSrc(m.thumb||m.image))}" loading="lazy" decoding="async" data-asset-emoji="${escapeHTML(m.emoji||'🤡')}" alt="">`:escapeHTML(m.emoji)}</div><div><div class="tiny">${m.id}</div><strong>꽝 콘텐츠</strong><div class="chip gray">${effectLabel(effectType(m))}</div></div></div><p class="muted" style="font-size:13px;min-height:40px">${escapeHTML(m.text)}</p><div class="row"><button class="btn light small" data-meme-edit="${m.id}" style="flex:1">✏️ 수정</button><button class="btn white small" data-meme-test="${m.id}" title="기록 없는 미리보기">👀</button><button class="btn white small" data-meme-delete="${m.id}">삭제</button></div></div>`).join('')}</div>
 <div class="section panel"><h2 class="h2">💬 상황별 꽝 대사</h2><p class="muted">학생이 QR을 몇 번 탐험했는지에 따라 자동으로 표시되는 문구예요. 한 줄에 대사 하나씩 입력하면 무작위로 출력돼요. 비워 두면 해당 상황은 기본 꽝 멘트를 보여줘요.</p><form id="reactionForm" class="reaction-editor">${REACTION_TYPES.map(([key,label])=>`<div class="field"><label for="reaction-${key}">${label}</label><textarea maxlength="800" id="reaction-${key}" rows="2">${escapeHTML(typeof data.settings?.reactions?.[key]==='string'?data.settings.reactions[key]:DEFAULT_REACTIONS[key])}</textarea></div>`).join('')}<button class="btn main block" type="submit">💾 상황별 대사 저장</button></form></div>`}
 function renderPrintAdmin(){return `<div class="panel"><h2 class="h2">🖨 QR코드 인쇄 · PDF 저장</h2><p class="muted">QR 80개를 원하는 크기로 출력할 수 있어요. 인쇄 창에서 <b>PDF로 저장</b>을 선택할 수도 있어요.</p><div class="note warn">⚠️ <b>최종 배포 주소(HTTPS)에서 QR을 출력</b>해야 해요. 파일을 직접 열어 출력하면 학생들이 접속할 수 없는 주소가 저장됩니다.</div><div class="toolbar"><div class="field"><label>한 장에 배치할 QR</label><select id="printSize"><option value="8" ${state.printSize===8?'selected':''}>A4당 8개 (권장)</option><option value="12" ${state.printSize===12?'selected':''}>A4당 12개</option><option value="20" ${state.printSize===20?'selected':''}>A4당 20개</option></select></div><button class="btn main" id="printAll" style="align-self:end">🖨 80개 전체 인쇄 / PDF</button><button class="btn white" id="printCsv" style="align-self:end">⬇ 배치표 CSV</button></div><div class="v29-print-audit" id="printAuditPanel"><div class="row space"><div><strong>🔎 인쇄 전 자동 점검</strong><p class="tiny">QR 개수·보물 배치·코드·실제 접속 주소·이미지 로딩을 검사합니다.</p></div><button type="button" class="btn light small" id="runPrintAudit" ${state.printAuditBusy?'disabled':''}>${state.printAuditBusy?'점검 중…':'점검 실행'}</button></div>${renderPrintAudit()}</div><hr class="divider"><div class="row space"><h3 class="h3">QR 인쇄 미리보기</h3><div class="row"><button class="btn small white" id="prevQr">← 이전</button><span class="tiny" id="qrPageLabel"></span><button class="btn small white" id="nextQr">다음 →</button></div></div><div class="qr-grid" id="qrPreview"></div><p class="tiny" style="margin-top:14px">QR 아래에는 수동 입력용 6자리 코드가 함께 인쇄됩니다. 장식은 보물 여부와 무관하며, 최종 배포 주소를 확정한 뒤 출력하세요.</p></div>`}
-function renderSettingsAdmin(){const s=data.settings;return `<div class="grid two"><div class="panel"><h2 class="h2">⚙ 행사 설정</h2><form id="settingsForm" class="stack"><div class="field"><label>게임 이름</label><input id="eventName" maxlength="32" value="${escapeHTML(s.eventName)}" required></div><div class="field"><label>소개 문구</label><input id="eventSubtitle" maxlength="90" value="${escapeHTML(s.subtitle)}"></div><div class="form-grid">${[1,2,3].map(g=>`<div class="field" style="${g===3?'grid-column:span 2':''}"><label>${g}학년 반 개수</label><input id="count${g}" type="number" min="0" max="20" value="${Number(s.classCounts[g]||0)}"></div>`).join('')}</div><div class="field"><label for="eventPhase">🎯 행사 운영 상태</label><select id="eventPhase">${[['preparing','🔒 준비 중 · 도감 확인만 가능'],['running','🎮 진행 중 · QR 수집 가능'],['paused','⏸ 일시 중지 · QR 수집 중단'],['ended','🏁 종료 · 결과 열람만 가능']].map(([v,label])=>`<option value="${v}" ${phase()===v?'selected':''}>${label}</option>`).join('')}</select><p class="tiny">준비/종료 중에는 QR 기록이 저장되지 않아요. 준비 상태에서 학생용 결과 테스트는 관리자 QR 미리보기를 사용하세요.</p></div><div class="note" id="preflightCard">${preflight().length?'⚠️ '+preflight().map(escapeHTML).join('<br>'):'✅ QR 80개 · 서로 다른 보물 12종 · 수동 코드 점검 완료'}</div><button class="btn main block">변경 사항 저장</button></form></div><div class="stack"><div class="panel"><h2 class="h2">🔐 서버 연결 상태</h2><div class="note ${F.enabled?'':'warn'}">${F.enabled?(F.ready&&!F.error?'☁ Firebase 연결됨':'⚠️ 서버 연결 중 또는 오류'):'🧪 현재는 이 브라우저에서만 작동하는 체험 모드예요.'}</div><p class="tiny">실제 행사는 Firebase 연결과 Firestore·Storage 보안 규칙이 필요해요. 이미지 업로드는 Firebase Storage를 사용합니다.</p>${F.enabled?`<button class="btn light block" id="seedCloud">${F.seeded?'기본 설정 다시 등록 (기존 기록 주의)':'🚀 초기 콘텐츠 서버에 등록'}</button><button class="btn white block" id="adminLogout" style="margin-top:9px">관리자 로그아웃</button>`:'<p class="helper"><b>firebase-config.js</b>에서 Firebase 웹 앱 설정을 입력하면 실시간 모드가 활성화됩니다.</p>'}</div><div class="panel"><h2 class="h2">💾 백업 · 초기화</h2><div class="stack"><button class="btn light block" id="exportJSON">⬇ 게임 설정 JSON 백업</button><label class="btn white block">⬆ 백업 JSON 가져오기<input type="file" id="importJSON" accept=".json,application/json" style="display:none"></label><button class="btn danger block" id="resetRecords">🚨 참가 기록 및 최초 발견 초기화</button></div><p class="tiny">행사 중 QR 배치를 바꾸면 이미 수집한 도감은 자동으로 취소되지 않습니다.</p></div></div></div>`}
+function renderSettingsAdmin(){const s=data.settings;return `<div class="grid two"><div class="panel"><h2 class="h2">⚙ 행사 설정</h2><form id="settingsForm" class="stack"><div class="field"><label>게임 이름</label><input id="eventName" maxlength="32" value="${escapeHTML(s.eventName)}" required></div><div class="field"><label>소개 문구</label><input id="eventSubtitle" maxlength="90" value="${escapeHTML(s.subtitle)}"></div><div class="form-grid">${[1,2,3].map(g=>`<div class="field" style="${g===3?'grid-column:span 2':''}"><label>${g}학년 반 개수</label><input id="count${g}" type="number" min="0" max="20" value="${Number(s.classCounts[g]||0)}"></div>`).join('')}</div><div class="field"><label for="eventPhase">🎯 행사 운영 상태</label><select id="eventPhase">${[['preparing','🔒 준비 중 · 도감 확인만 가능'],['running','🎮 진행 중 · QR 수집 가능'],['paused','⏸ 일시 중지 · QR 수집 중단'],['ended','🏁 종료 · 결과 열람만 가능']].map(([v,label])=>`<option value="${v}" ${phase()===v?'selected':''}>${label}</option>`).join('')}</select><p class="tiny">준비/종료 중에는 QR 기록이 저장되지 않아요. 준비 상태에서 학생용 결과 테스트는 관리자 QR 미리보기를 사용하세요.</p></div><div class="note" id="preflightCard">${preflight().length?'⚠️ '+preflight().map(escapeHTML).join('<br>'):'✅ QR 80개 · 서로 다른 보물 12종 · 수동 코드 점검 완료'}</div><button class="btn main block">변경 사항 저장</button></form></div><div class="stack"><div class="panel"><h2 class="h2">🔐 서버 연결 상태</h2><div class="note ${F.enabled?'':'warn'}">${F.enabled?(F.ready&&!F.error?'☁ Firebase 연결됨':'⚠️ 서버 연결 중 또는 오류'):'🧪 현재는 이 브라우저에서만 작동하는 체험 모드예요.'}</div><p class="tiny">실제 행사는 Firebase 연결과 Firestore·Storage 보안 규칙이 필요해요. 이미지 업로드는 Firebase Storage를 사용합니다.</p>${F.enabled?`<button class="btn light block" id="seedCloud">${F.seeded?'기본 설정 다시 등록 (기존 기록 주의)':'🚀 초기 콘텐츠 서버에 등록'}</button><button class="btn white block" id="adminLogout" style="margin-top:9px">관리자 로그아웃</button>`:'<p class="helper"><b>firebase-config.js</b>에서 Firebase 웹 앱 설정을 입력하면 실시간 모드가 활성화됩니다.</p>'}</div><div class="panel"><h2 class="h2">💾 백업 · 초기화</h2><div class="stack"><button class="btn light block" id="exportJSON">⬇ 게임 설정 JSON 백업</button><label class="btn white block">⬆ 백업 JSON 가져오기<input type="file" id="importJSON" accept=".json,application/json" style="display:none"></label><button class="btn danger block" id="resetRecords">🚨 전체 탐험 기록 초기화 (학생 정보 유지)</button></div><p class="tiny">행사 중 QR 배치를 바꾸면 이미 수집한 도감은 자동으로 취소되지 않습니다.</p></div></div></div>`}
 function bindAdmin(){if(state.view!=='admin')return;$('#backGame')?.addEventListener('click',()=>{state.view='home';render()});
  if(F.enabled&&!isAdmin()){const f=$('#adminLoginForm');if(f)f.onsubmit=adminLogin;return}
  $$('[data-tab]').forEach(x=>x.onclick=async()=>{state.adminTab=x.dataset.tab;render();if(x.dataset.tab==='overview')await loadAdminPlayers()});
@@ -2088,6 +2146,7 @@ $$('[data-qr-tile]').forEach(el=>el.onclick=async()=>{let id=el.dataset.qrTile;i
  $('#settingsForm')?.addEventListener('submit',saveSettings);
  $('#exportJSON')?.addEventListener('click',exportJSON);
  $('#importJSON')?.addEventListener('change',importJSON);
+ $$('[data-delete-player]').forEach(btn=>btn.onclick=()=>deleteParticipant(btn.dataset.deletePlayer));
  $('#resetRecords')?.addEventListener('click',resetRecords);
  $('#seedCloud')?.addEventListener('click',seedCloud);
  $('#adminLogout')?.addEventListener('click',async()=>{await F.lib.auth.signOut(F.adminAuth);F.adminUser=null;render()});
@@ -2187,12 +2246,62 @@ function exportQrCsv(){csvDownload([['QR번호','수동 입력 코드','보물/�
 function exportParticipants(){let participants=F.enabled?state.adminPlayers:Object.values(data.participants||{});csvDownload([['학년','반','번호','이름','획득 개수','수집 보물','탐험 QR 수','꽝 누적','연속 꽝','마지막 QR'],...participants.map(p=>[p.grade,p.className,p.studentNumber||'',p.name,p.collectedIds?.length||0,(p.collectedIds||[]).join(' / '),seenIds(p).length,p.missTotal||0,p.missStreak||0,p.lastQrId||''])],'학생자치회_참여학생_현황.csv')}
 function exportJSON(){const {firstFinds,participants,...settingsOnly}=data;downloadBlob(new Blob([JSON.stringify(settingsOnly,null,2)],{type:'application/json'}),'학생자치회_보물찾기_설정백업.json')}
 async function importJSON(e){let file=e.target.files[0];if(!file)return;try{let j=JSON.parse(await file.text());if(!Array.isArray(j.qrs)||j.qrs.length!==80||!Array.isArray(j.treasures)||j.treasures.length!==12||!Array.isArray(j.memes)||!j.memes.length||!j.settings)throw Error('보물찾기 설정 백업 파일이 아니에요.');if(!importantQrChange('설정 백업을 가져와 QR 배치를 교체합니다'))return;if(!confirm('백업 파일의 QR·보물·꽝·행사 설정으로 교체할까요?'))return;let next={qrs:j.qrs.map(x=>({...x})),treasures:j.treasures.map(x=>({...x})),memes:j.memes.map(x=>({...x})),settings:{...j.settings}};if(F.enabled){await batchSaveEntities('qrs',next.qrs);await batchSaveEntities('treasures',next.treasures);await batchSaveEntities('memes',next.memes);await updateEntity('settings','app',next.settings)}Object.assign(data,next);saveLocal();await recordQrChange('설정 백업으로 QR·보물·꽝 배치 변경');render();toast('백업 설정을 불러왔어요.')}catch(err){toast('가져오기 실패: '+err.message)}finally{e.target.value=''}}
+function clearDeletedParticipant(id){
+ try{
+  if(getStoredProfile()?.id===id)localStorage.removeItem(USER);
+  localStorage.removeItem(collectionCacheKey(id));
+ }catch{}
+ if(state.participant?.id!==id)return false;
+ state.participant=null;
+ if(state.view==='home')hideDialog();
+ return true;
+}
+async function deleteParticipant(id){
+ if(state.view!=='admin'||!isAdmin()||state.deletingPlayer)return;
+ const p=F.enabled?state.adminPlayers.find(player=>player.id===id):data.participants[id];
+ if(!p)return;
+ if(!confirm(fullName(p)+' 학생의 참가 정보와 탐험 기록을 삭제할까요? 이 학생의 최초 발견 기록도 삭제됩니다. 삭제 후 복구할 수 없어요.'))return;
+ state.deletingPlayer=id;
+ render();
+ try{
+  if(F.enabled){
+   const fs=F.lib.fs,ref=fs.doc(F.adminDb,'players',id);
+   const treasureIds=new Set([...data.treasures.map(t=>t.id),...Object.keys(data.firstFinds)]);
+   const released=await fs.runTransaction(F.adminDb,async trx=>{
+    const player=await trx.get(ref);
+    const ids=new Set([...treasureIds,...(player.data()?.collectedIds||[])]);
+    const firsts=await Promise.all([...ids].map(tid=>trx.get(fs.doc(F.adminDb,'firstFinds',tid))));
+    const owned=firsts.filter(snap=>snap.data()?.playerId===id);
+    owned.forEach(snap=>trx.delete(snap.ref));
+    if(player.exists())trx.delete(ref);
+    return owned.map(snap=>snap.id);
+   });
+   state.adminPlayers=state.adminPlayers.filter(player=>player.id!==id);
+   released.forEach(tid=>{if(data.firstFinds[tid]?.playerId===id)delete data.firstFinds[tid]});
+  }else{
+   const next=readLocal();
+   delete next.participants[id];
+   for(const [tid,first] of Object.entries(next.firstFinds)){
+    if(first.playerId===id)delete next.firstFinds[tid];
+   }
+   localStorage.setItem(STORE,JSON.stringify(next));
+   data=next;
+  }
+  clearDeletedParticipant(id);
+  toast('선택한 학생의 참가 정보와 탐험 기록을 삭제했어요.');
+ }catch(err){
+  toast(err.code==='permission-denied'?'삭제 권한이 없어요. Firestore에서 관리자의 학생 기록 삭제 권한을 확인해 주세요.':'학생 기록을 삭제하지 못했어요: '+err.message);
+ }finally{
+  state.deletingPlayer=null;
+  render();
+ }
+}
 async function resetRecords(){if(!confirm('모든 학생의 수집 내역과 최초 발견 기록을 초기화할까요?'))return;if(!confirm('정말 초기화할까요? 복구할 수 없어요.'))return;try{if(F.enabled){const fs=F.lib.fs;let players=await fs.getDocs(fs.collection(F.adminDb,'players'));let firsts=await fs.getDocs(fs.collection(F.adminDb,'firstFinds'));let tasks=[...players.docs.map(x=>({ref:x.ref,type:'player'})),...firsts.docs.map(x=>({ref:x.ref,type:'first'}))];for(let i=0;i<tasks.length;i+=400){let batch=fs.writeBatch(F.adminDb);tasks.slice(i,i+400).forEach(x=>x.type==='player'?batch.update(x.ref,{collectedIds:[],scannedQrIds:[],missTotal:0,missStreak:0,lastQrId:'',lastScanAt:null,foundAt:{},lastTreasureId:'',lastTreasureAt:null,updatedAt:fs.serverTimestamp()}):batch.delete(x.ref));await batch.commit()}state.adminPlayers=state.adminPlayers.map(p=>({...p,collectedIds:[],scannedQrIds:[],missTotal:0,missStreak:0,foundAt:{},lastTreasureId:'',lastTreasureAt:null}));if(state.participant)Object.assign(state.participant,{collectedIds:[],scannedQrIds:[],missTotal:0,missStreak:0,foundAt:{},lastTreasureId:'',lastTreasureAt:null})}else {Object.values(data.participants).forEach(p=>Object.assign(p,{collectedIds:[],scannedQrIds:[],missTotal:0,missStreak:0,foundAt:{},lastQrId:'',lastScanAt:null,lastTreasureId:'',lastTreasureAt:null}));if(state.participant)Object.assign(state.participant,{collectedIds:[],scannedQrIds:[],missTotal:0,missStreak:0,foundAt:{},lastQrId:'',lastScanAt:null,lastTreasureId:'',lastTreasureAt:null});saveLocal()}data.firstFinds={};render();toast('참가 기록을 모두 초기화했어요.')}catch(err){toast('초기화 실패: '+err.message)}}
 async function updateEntity(collection,id,change){if(!F.enabled)return;if(!F.adminUser)throw Error('관리자로 로그인해야 합니다.');await F.lib.fs.setDoc(F.lib.fs.doc(F.adminDb,collection,id),change,{merge:true})}
 async function batchSaveEntities(collection,entries){if(!F.enabled)return;if(!F.adminUser)throw Error('관리자 로그인이 필요합니다.');let fs=F.lib.fs;for(let i=0;i<entries.length;i+=400){let batch=fs.writeBatch(F.adminDb);entries.slice(i,i+400).forEach(entry=>batch.set(fs.doc(F.adminDb,collection,entry.id),entry));await batch.commit()}}
 async function adminLogin(e){e.preventDefault();let btn=$('#adminLoginForm button');btn.disabled=true;btn.textContent='로그인 중…';try{let credential=await F.lib.auth.signInWithEmailAndPassword(F.adminAuth,$('#adminEmail').value.trim(),$('#adminPassword').value);let proof=await F.lib.fs.getDoc(F.lib.fs.doc(F.adminDb,'admins',credential.user.uid));if(!proof.exists()){await F.lib.auth.signOut(F.adminAuth);throw Error('이 계정에 관리자 권한이 없어요. Firebase admins 컬렉션에 UID를 등록하세요.')}F.adminUser=credential.user;watchAdminPlayers();render();await loadAdminPlayers();toast('관리자 로그인 완료')}catch(err){toast('관리자 로그인 실패: '+err.message);render()}}
-function watchAdminPlayers(){if(!F.enabled||!F.adminUser)return;if(adminUnsubscribe)adminUnsubscribe();adminUnsubscribe=F.lib.fs.onSnapshot(F.lib.fs.collection(F.adminDb,'players'),snap=>{state.adminPlayers=snap.docs.map(d=>({id:d.id,...d.data()}));if(state.view==='admin'&&state.adminTab==='overview'&&!state.modal)render()},err=>console.warn('admin players',err));}
-async function loadAdminPlayers(){if(!F.enabled||!F.adminUser)return;try{const snaps=await F.lib.fs.getDocs(F.lib.fs.collection(F.adminDb,'players'));state.adminPlayers=snaps.docs.map(d=>({id:d.id,...d.data()}));if(state.view==='admin'&&state.adminTab==='overview')render()}catch(err){toast('참가 현황을 불러오지 못했어요: '+err.message)}}
+function watchAdminPlayers(){if(!F.enabled||!F.adminUser)return;if(adminUnsubscribe)adminUnsubscribe();adminUnsubscribe=F.lib.fs.onSnapshot(F.lib.fs.collection(F.adminDb,'players'),snap=>{state.adminPlayers=snap.docs.map(d=>({...d.data(),id:d.id}));if(state.view==='admin'&&state.adminTab==='overview'&&!state.modal)render()},err=>console.warn('admin players',err));}
+async function loadAdminPlayers(){if(!F.enabled||!F.adminUser)return;try{const snaps=await F.lib.fs.getDocs(F.lib.fs.collection(F.adminDb,'players'));state.adminPlayers=snaps.docs.map(d=>({...d.data(),id:d.id}));if(state.view==='admin'&&state.adminTab==='overview')render()}catch(err){toast('참가 현황을 불러오지 못했어요: '+err.message)}}
 async function seedCloud(){if(!F.enabled||!F.adminUser)return;if(F.seeded&&!importantQrChange('서버의 QR·보물·꽝 기본 데이터 다시 등록'))return;if(F.seeded&&!confirm('현재 서버의 QR·보물·꽝 설정이 기본값으로 덮어써질 수 있습니다. 계속할까요?'))return;let btn=$('#seedCloud');btn.disabled=true;btn.textContent='서버 데이터 등록 중…';try{await batchSaveEntities('qrs',data.qrs);await batchSaveEntities('treasures',data.treasures);await batchSaveEntities('memes',data.memes);const initialSettings=F.seeded?data.settings:{...data.settings,phase:'preparing',eventOpen:false};await updateEntity('settings','app',initialSettings);data.settings=initialSettings;F.seeded=true;render();toast('서버 등록 완료! 행사 상태는 준비 중입니다. 점검 후 진행 중으로 변경하세요.')}catch(err){toast('초기 등록 실패: '+err.message);btn.disabled=false;btn.textContent='다시 시도'}}
 async function reloadCloud(){if(!F.enabled||!F.ready)return;let fs=F.lib.fs;const [settings,qs,ts,ms,firsts]=await Promise.all([fs.getDoc(fs.doc(F.db,'settings','app')),fs.getDocs(fs.collection(F.db,'qrs')),fs.getDocs(fs.collection(F.db,'treasures')),fs.getDocs(fs.collection(F.db,'memes')),fs.getDocs(fs.collection(F.db,'firstFinds'))]);F.seeded=qs.size===80;
  if(settings.exists())data.settings={...defaultSettings,...settings.data(),phase:settings.data().phase||(settings.data().eventOpen===false?'ended':'running')};
@@ -2200,7 +2309,7 @@ async function reloadCloud(){if(!F.enabled||!F.ready)return;let fs=F.lib.fs;cons
  if(ts.size)data.treasures=defaultTreasures.map(t=>({...t,...ts.docs.find(d=>d.id===t.id)?.data()}));
  if(ms.size)data.memes=ms.docs.map(d=>({id:d.id,...d.data()}));
  data.firstFinds={};firsts.docs.forEach(d=>{data.firstFinds[d.id]=d.data()});
- if(state.participant){let ps=await fs.getDoc(fs.doc(F.db,'players',state.participant.id));if(ps.exists()){state.participant={...state.participant,...ps.data()};saveCollectionCache(state.participant)}}
+ if(state.participant){let ps=await fs.getDoc(fs.doc(F.db,'players',state.participant.id));if(ps.exists()){state.participant={...state.participant,...ps.data()};saveCollectionCache(state.participant)}else if(!ps.metadata.fromCache){clearDeletedParticipant(ps.id)}}
 }
 async function initFirebase(){if(!F.enabled){let saved=getStoredProfile();if(saved&&data.participants[saved.id]){state.participant={...data.participants[saved.id]};state.view='home'}else if(saved){let p={...saved,collectedIds:[]};data.participants[p.id]=p;state.participant=p;state.view='home';saveCollectionCache(p);saveLocal()}render();handlePending();return}
 try{let version='10.14.1';const [app,auth,fs,storage]=await Promise.all([import(`https://www.gstatic.com/firebasejs/${version}/firebase-app.js`),import(`https://www.gstatic.com/firebasejs/${version}/firebase-auth.js`),import(`https://www.gstatic.com/firebasejs/${version}/firebase-firestore.js`),import(`https://www.gstatic.com/firebasejs/${version}/firebase-storage.js`)]);F.lib={app,auth,fs,storage};F.app=app.initializeApp(F.config,'treasure_students');F.auth=auth.getAuth(F.app);F.db=fs.getFirestore(F.app);let a=app.initializeApp(F.config,'treasure_administrators');F.adminAuth=auth.getAuth(a);F.adminDb=fs.getFirestore(a);F.adminStorage=storage.getStorage(a);
@@ -2212,12 +2321,21 @@ try{let version='10.14.1';const [app,auth,fs,storage]=await Promise.all([import(
  fs.onSnapshot(fs.collection(F.db,'treasures'),qs=>{if(qs.size){data.treasures=defaultTreasures.map(t=>({...t,...qs.docs.find(d=>d.id===t.id)?.data()}));if(state.participant&&state.view==='home')render()}},e=>console.warn('treasures realtime',e));
  fs.onSnapshot(fs.collection(F.db,'memes'),qs=>{if(qs.size)data.memes=qs.docs.map(d=>({id:d.id,...d.data()}))},e=>console.warn('memes realtime',e));
  fs.onSnapshot(fs.doc(F.db,'settings','app'),snap=>{if(snap.exists()){data.settings={...defaultSettings,...snap.data(),phase:snap.data().phase||(snap.data().eventOpen===false?'ended':'running')};if(state.view!=='admin')render()}},e=>console.warn('settings realtime',e));
- const profile=getStoredProfile();if(profile&&profile.id===F.uid){let p=await fs.getDoc(fs.doc(F.db,'players',F.uid));if(p.exists()){state.participant={id:F.uid,...p.data()};saveCollectionCache(state.participant);state.view='home'}}
- fs.onSnapshot(fs.doc(F.db,'players',F.uid),snap=>{if(snap.exists()&&state.participant){state.participant={id:F.uid,...snap.data()};saveCollectionCache(state.participant);if(state.view==='home'&&!state.modal)render()}},e=>console.warn('player realtime',e));
+ const profile=getStoredProfile();if(profile&&profile.id===F.uid){let p=await fs.getDoc(fs.doc(F.db,'players',F.uid));if(p.exists()){state.participant={id:F.uid,...p.data()};saveCollectionCache(state.participant);state.view='home'}else if(!p.metadata.fromCache){clearDeletedParticipant(profile.id)}}
+ fs.onSnapshot(fs.doc(F.db,'players',F.uid),snap=>{
+  if(snap.exists()&&state.participant){state.participant={id:F.uid,...snap.data()};saveCollectionCache(state.participant);if(state.view==='home'&&!state.modal)render()}
+  else if(!snap.exists()&&!snap.metadata.fromCache&&state.participant?.id===F.uid){clearDeletedParticipant(F.uid);render()}
+ },e=>console.warn('player realtime',e));
  render();handlePending();
  }catch(err){F.error=err.message||String(err);F.ready=false;const saved=getStoredProfile();const cached=saved?.id?restoreCollectionCache(saved.id):null;if(cached){state.participant=cached;try{const old=JSON.parse(localStorage.getItem(collectionCacheKey(saved.id))||'null');if(Array.isArray(old?.treasures)&&old.treasures.length===12)data.treasures=old.treasures}catch{}state.view='home'}render();}}
 // QR URL로 직접 진입한 경우, 등록 후 자동 판정합니다.
 window.addEventListener('online',()=>{networkOnline=true;if(state.view==='home'&&!state.modal)render();});window.addEventListener('offline',()=>{networkOnline=false;if(state.view==='home'&&!state.modal)render();});
+window.addEventListener('storage',e=>{
+ if(F.enabled||e.key!==STORE||!state.participant)return;
+ const next=readLocal();
+ if(next.participants[state.participant.id])return;
+ data=next;clearDeletedParticipant(state.participant.id);render();
+});
 window.addEventListener('popstate',()=>{if(location.search.includes('qr=')){state.pendingCode=new URLSearchParams(location.search).get('qr');handlePending()}});
 initFirebase();
 })();
