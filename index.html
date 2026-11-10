@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f5f2e9"><title>시크릿 보물찾기 v3.0 · 학생자치회</title>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f5f2e9"><title>시크릿 보물찾기 v3.1 · 학생자치회</title>
 <style>
 :root{--ink:#202b38;--muted:#74808d;--paper:#f5f2e9;--line:#dfe2e2;--sea:#227c79;--mint:#e2f3ec;--sun:#ffd55e;--orange:#ef794f;--card:#fff;--shadow:0 9px 30px rgba(24,44,55,.065);--radius:21px;font-family:Pretendard,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.5;min-height:100vh}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}a{color:inherit}header{background:rgba(255,255,255,.9);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30;backdrop-filter:blur(14px)}.top{max-width:1160px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;align-items:center;gap:9px;font-weight:900;letter-spacing:-.55px;font-size:18px;white-space:nowrap}.brand-logo{display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:var(--sun);box-shadow:inset 0 -3px rgba(0,0,0,.08);font-size:22px}.top-actions{display:flex;align-items:center;gap:8px}.mini-btn{border:1px solid var(--line);background:#fff;border-radius:11px;color:#384653;font-weight:700;font-size:12px;padding:9px 12px}.mini-btn:hover{border-color:var(--sea)}.shell{max-width:1110px;margin:0 auto;padding:24px 22px 70px}.eyebrow{text-transform:uppercase;font-size:12px;letter-spacing:1.3px;font-weight:900;color:#18827d}.muted{color:var(--muted)}.tiny{font-size:12px;color:var(--muted)}.h1{font-size:clamp(29px,4.9vw,48px);font-weight:950;letter-spacing:-1.9px;line-height:1.15;margin:8px 0 12px}.h2{font-weight:900;letter-spacing:-.8px;font-size:23px;margin:0 0 14px}.h3{font-weight:900;margin:0 0 7px;font-size:17px}.lead{font-size:15px;color:#52616e}.panel{background:var(--card);border:1px solid #e5e8e8;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}.inset{background:#f7f9f9;border:1px solid var(--line);border-radius:15px;padding:14px}.grid{display:grid;gap:16px}.two{grid-template-columns:1.25fr .75fr}.three{grid-template-columns:repeat(3,1fr)}.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.space{justify-content:space-between}.stack{display:flex;flex-direction:column;gap:12px}.btn{border:0;background:var(--ink);color:#fff;font-weight:900;border-radius:14px;padding:13px 18px;display:inline-flex;align-items:center;gap:8px;justify-content:center;transition:transform .13s,box-shadow .13s;font-size:14px}.btn:hover{transform:translateY(-1px)}.btn.main{background:var(--sea);box-shadow:0 5px 0 #17615e}.btn.sun{background:var(--sun);color:var(--ink);box-shadow:0 5px 0 #d2ad41}.btn.light{background:#e8f0f0;color:#234b4a}.btn.white{background:white;border:1px solid var(--line);color:var(--ink)}.btn.danger{background:#d4524e}.btn.small{padding:9px 12px;border-radius:10px;font-size:12px}.btn.block{width:100%}.field{display:flex;flex-direction:column;gap:7px}.field label{font-size:13px;font-weight:900}.field input,.field select,.field textarea,input.text,select.text{width:100%;border:1px solid #d6dedf;background:#fff;border-radius:12px;padding:12px 13px;outline:none;color:var(--ink);font-size:14px}.field textarea{min-height:85px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--sea);box-shadow:0 0 0 3px rgba(34,124,121,.1)}.note{padding:13px 15px;border:1px solid #c7ded5;background:#ebf8f1;color:#2f6556;border-radius:13px;font-size:13px}.note.warn{background:#fff6e3;border-color:#f4df9c;color:#83612e}.note.danger{background:#fff0ee;border-color:#f1c8c3;color:#a2483a}.banner{margin:0 0 20px}.hero{display:grid;grid-template-columns:1fr 355px;gap:20px;align-items:stretch}.hero-copy{padding:22px 4px 12px}.hero-art{border-radius:28px;background:linear-gradient(150deg,#ffe69b,#f5bb66);display:flex;align-items:center;justify-content:center;min-height:280px;position:relative;overflow:hidden;border:1px solid #ebc47e}.hero-art .chest{font-size:135px;filter:drop-shadow(0 18px 9px rgba(119,85,24,.2));transform:rotate(-7deg);z-index:2}.spark{position:absolute;font-size:35px}.spark.a{left:38px;top:35px}.spark.b{right:40px;top:65px}.spark.c{left:65px;bottom:33px}.hero-art:before{content:'';position:absolute;background:rgba(255,255,255,.45);width:380px;height:380px;border-radius:50%;right:-160px;top:-170px}.big-metric{font-size:39px;font-weight:950;letter-spacing:-2px}.metric-card{padding:20px}.metric-label{font-size:13px;color:var(--muted);font-weight:800}.progress{height:10px;background:#e5ebeb;border-radius:999px;overflow:hidden;margin-top:13px}.progress>div{height:100%;background:linear-gradient(90deg,#42b6a0,#1f7a78);transition:width .5s}.treasure-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.treasure-card{border:1px solid #e0e7e7;border-radius:18px;padding:12px;text-align:center;background:#fff;min-width:0;box-shadow:0 3px 0 rgba(23,43,55,.025)}.treasure-card.locked{background:#f2f4f4}.treasure-card .art{height:132px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,var(--c,#e4e9e9),#fff);border-radius:13px;overflow:hidden;position:relative}.treasure-card.locked .art{background:#dee4e5}.treasure-card .art .emoji{font-size:70px}.treasure-card.locked .art .emoji{filter:grayscale(1) brightness(.18);opacity:.27}.treasure-card .art img{width:100%;height:100%;object-fit:cover}.treasure-card.locked img{filter:grayscale(1) brightness(.12);opacity:.25}.treasure-card .art .lock{position:absolute;font-size:26px}.treasure-card .num{font-size:10px;color:#8c999b;font-weight:900;margin-top:9px}.treasure-card .name{font-size:14px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:3px}.treasure-card .stamp{font-size:10px;font-weight:900;color:#ab781d;background:#fff2ce;border-radius:7px;display:inline-block;padding:2px 6px}.chip{font-size:12px;font-weight:850;border-radius:999px;padding:5px 10px;background:#e9f2f1;color:#22736d;white-space:nowrap}.chip.gold{background:#fff2cb;color:#a46f15}.chip.gray{background:#eff1f2;color:#66747e}.chip.red{background:#ffe8e5;color:#b45c4c}.section{margin-top:26px}.divider{border:0;border-top:1px solid var(--line);margin:18px 0}.welcome-wrap{max-width:520px;margin:34px auto}.welcome-art{text-align:center;font-size:58px;letter-spacing:6px;padding-bottom:11px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.steps{display:flex;justify-content:space-between;gap:9px;margin-top:16px}.step{text-align:center;font-size:12px;color:#687784;flex:1}.step>span{display:block;font-size:24px;margin-bottom:6px}.tabs{display:flex;gap:7px;overflow:auto;padding:4px 0 13px;scrollbar-width:thin}.tab{border:1px solid var(--line);background:#fff;border-radius:12px;padding:10px 14px;color:#64747d;font-weight:900;white-space:nowrap;font-size:13px}.tab.active{background:var(--ink);color:white;border-color:var(--ink)}.admin-title{margin-bottom:16px}.list-wrap{overflow:auto;border:1px solid var(--line);border-radius:15px;background:#fff}.data-table{width:100%;border-collapse:collapse;font-size:13px;min-width:640px}.data-table th{text-align:left;background:#f7f8f8;color:#60707b;font-weight:900}.data-table td,.data-table th{padding:11px 13px;border-bottom:1px solid #edf0f0}.data-table tr:last-child td{border:0}.data-table td input{max-width:200px}.toolbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:12px 0 16px}.qr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.qr-cell{border:1px solid #e1e6e5;background:#fff;border-radius:16px;padding:14px;text-align:center}.qr-cell .qr-box{display:flex;justify-content:center;margin:0 auto 6px}.qr-cell canvas{max-width:100%;height:auto}.qr-cell .smalltext{font-size:12px;font-weight:900}.qr-cell .code{font-size:11px;color:#809098;letter-spacing:.4px}.pill{background:#ebf5f4;color:#226d69;border-radius:9px;padding:5px 9px;font-weight:850;font-size:11px}.qr-cell .pill{display:inline-block;margin-top:8px}.admin-edit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.edit-card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:16px}.edit-card .head{display:flex;gap:11px;align-items:center;margin-bottom:13px}.edit-card .avatar{width:62px;height:62px;border-radius:13px;background:#f0f1ef;display:grid;place-items:center;font-size:32px;flex-shrink:0;overflow:hidden}.edit-card .avatar img{width:100%;height:100%;object-fit:cover}.config-info{font-size:12px;color:#657580;background:#f7faf9;padding:13px;border-radius:12px}.overlay{position:fixed;inset:0;background:rgba(15,29,34,.6);z-index:80;display:flex;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(5px)}.dialog{background:#fff;border-radius:24px;width:min(490px,100%);max-height:min(91vh,850px);overflow:auto;box-shadow:0 24px 70px rgba(0,0,0,.25);padding:24px;position:relative}.dialog.wide{width:min(680px,100%)}.dialog .x{position:absolute;right:17px;top:13px;border:0;background:#f0f2f1;border-radius:11px;width:35px;height:35px;font-size:20px}.result-icon{font-size:80px;text-align:center}.result-art{border-radius:20px;display:flex;align-items:center;justify-content:center;min-height:180px;background:linear-gradient(120deg,#feecb3,#ffdaa2);font-size:100px;overflow:hidden;margin:20px 0 12px}.result-art img{width:100%;max-height:280px;object-fit:contain}.result-art.miss{background:linear-gradient(140deg,#e5f0f2,#f4f6f6)}.result-title{font-size:27px;font-weight:950;text-align:center;letter-spacing:-1px}.result-description{text-align:center;color:#667782;margin:8px auto 18px}.scan-view{width:100%;border-radius:15px;overflow:hidden;background:#122028;position:relative;min-height:210px;display:flex;align-items:center;justify-content:center;margin:16px 0}.scan-view video{width:100%;max-height:350px;display:block}.scan-placeholder{position:absolute;color:#dce9e4;text-align:center;font-size:14px}.scan-border{position:absolute;pointer-events:none;width:62%;aspect-ratio:1;border:3px solid #ffe07c;border-radius:24px;box-shadow:0 0 0 1000px rgba(0,0,0,.04)}.helper{font-size:12px;color:#86939b}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:120;background:#253c47;color:#fff;border-radius:15px;padding:13px 18px;font-size:13px;font-weight:800;box-shadow:0 11px 32px rgba(0,0,0,.2);max-width:90vw}.empty{text-align:center;padding:35px 10px;color:#71818a}.empty .icon{font-size:52px;margin-bottom:8px}.print-board{display:none}.print-sheet{display:grid;grid-template-columns:repeat(var(--cols,2),1fr);gap:10px}.print-item{border:1.5px dashed #9ca5a5;border-radius:8px;padding:7px 4px;text-align:center;break-inside:avoid;page-break-inside:avoid}.print-item canvas{display:block;margin:auto;max-width:100%;height:auto}.print-item b{display:block;font-size:11px}.print-item span{font-size:9px}.print-item small{display:block;font-size:9px}.toggle{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800}.toggle input{accent-color:#227c79;width:18px;height:18px}.bubble{display:inline-block;padding:7px 11px;background:#e6f3ed;border-radius:11px;margin:4px}.onboarding-note{font-size:13px;padding:14px;background:#fff7df;border-radius:13px;color:#7e662a}.art-float{animation:float 3s ease-in-out infinite}@keyframes float{50%{transform:translateY(-8px) rotate(-5deg)}}
@@ -364,16 +364,16 @@ body{background-image:radial-gradient(circle at 0% 0%,rgba(151,113,238,.10),tran
 .treasure-reveal{position:relative;isolation:isolate;display:grid;grid-template:minmax(0,1fr)/minmax(0,1fr);place-items:center;height:100%;overflow:hidden;color:#fff;text-align:center;background:radial-gradient(ellipse at center,#33204e,#0b102b 60%,#090a20)}
 .treasure-reveal__ring,.treasure-reveal__wave,.treasure-reveal__art,.treasure-reveal__seal,.treasure-reveal__rays{grid-area:1/1;pointer-events:none}
 .treasure-reveal__ring,.treasure-reveal__wave{width:min(74vw,52vh,390px);aspect-ratio:1;border:1px solid #ffda83;border-radius:50%;box-shadow:0 0 20px #ffce83,inset 0 0 20px #ffce8366}
-.treasure-reveal__ring{border-style:dashed;outline:1px solid #ffda8355;outline-offset:12px;animation:treasure-ring 1.45s ease-in both}
-.treasure-reveal__wave{animation:treasure-wave .8s 1.38s ease-out both}
-.treasure-reveal__rays{width:min(160vw,1050px);aspect-ratio:1;background:repeating-conic-gradient(from 22deg,transparent 0 14deg,#ffe4a138 16deg,transparent 29deg);mask-image:radial-gradient(circle,black,transparent 67%);animation:treasure-rays 1.45s 1.38s ease-out both}
-.treasure-reveal__seal{width:min(42vw,32vh,230px);overflow:visible;filter:drop-shadow(0 0 12px #ffbc63);animation:treasure-seal 1.53s ease-in both}
-.treasure-reveal__crack{stroke-dasharray:230;animation:treasure-crack .7s .53s ease-in both}
-.treasure-reveal__art{position:relative;display:grid;place-items:center;width:min(85vw,59vh,490px);height:min(53vh,490px);padding:10px;overflow:hidden;border-radius:22px;background:radial-gradient(circle,var(--treasure-color),#1c1534 72%);border:2px solid #ffdc8d;box-shadow:0 0 35px #ffbf5270;animation:treasure-art 2.75s ease-out both}
+.treasure-reveal__ring{border-style:dashed;outline:1px solid #ffda8355;outline-offset:12px;animation:treasure-ring 3.22s ease-in both}
+.treasure-reveal__wave{animation:treasure-wave 1.15s 3.15s ease-out both}
+.treasure-reveal__rays{width:min(160vw,1050px);aspect-ratio:1;background:repeating-conic-gradient(from 22deg,transparent 0 14deg,#ffe4a138 16deg,transparent 29deg);mask-image:radial-gradient(circle,black,transparent 67%);animation:treasure-rays 1.9s 3.15s ease-out both}
+.treasure-reveal__seal{width:min(42vw,32vh,230px);overflow:visible;filter:drop-shadow(0 0 12px #ffbc63);animation:treasure-seal 3.3s ease-in both}
+.treasure-reveal__crack{stroke-dasharray:230;animation:treasure-crack 1.55s 1.1s ease-in-out both}
+.treasure-reveal__art{position:relative;display:grid;place-items:center;width:min(85vw,59vh,490px);height:min(53vh,490px);padding:10px;overflow:hidden;border-radius:22px;background:radial-gradient(circle,var(--treasure-color),#1c1534 72%);border:2px solid #ffdc8d;box-shadow:0 0 35px #ffbf5270;animation:treasure-art 4.6s ease-out both}
 .treasure-reveal__art img{width:100%;height:100%;object-fit:contain;min-height:0}
 .treasure-reveal__art .emoji{font-size:clamp(64px,19vw,150px)}
-.treasure-reveal__art::after{content:'';position:absolute;inset:0;background:linear-gradient(119deg,transparent 35%,#ffecba9c 50%,transparent 65%);animation:treasure-sweep .78s 1.4s ease-out both}
-.treasure-reveal__title{position:absolute;top:calc(50% + min(28vh,260px));left:0;right:0;margin:0;padding:0 20px;font-size:clamp(23px,7vw,42px);color:#ffebba;text-shadow:0 3px 14px #040311;animation:treasure-title .32s 2.04s ease-out both}
+.treasure-reveal__art::after{content:'';position:absolute;inset:0;background:linear-gradient(119deg,transparent 35%,#ffecba9c 50%,transparent 65%);animation:treasure-sweep 1.05s 3.2s ease-out both}
+.treasure-reveal__title{position:absolute;top:calc(50% + min(28vh,260px));left:0;right:0;margin:0;padding:0 20px;font-size:clamp(23px,7vw,42px);color:#ffebba;text-shadow:0 3px 14px #040311;animation:treasure-title .42s 4s ease-out both}
 .treasure-reveal__title small{display:block;margin-top:3px;font-size:.51em;color:white}
 .treasure-reveal__skip{position:absolute;bottom:max(15px,env(safe-area-inset-bottom));z-index:1}
 .v30-result-kicker.treasure-first-stamp{display:inline-block;padding:5px 12px;border:2px solid #b77920;border-radius:7px;background:#fff1c3;color:#754709;letter-spacing:1px;transform:rotate(-5deg);animation:treasure-stamp .34s ease-out both}
@@ -382,10 +382,114 @@ body{background-image:radial-gradient(circle at 0% 0%,rgba(151,113,238,.10),tran
 @keyframes treasure-crack{from{stroke-dashoffset:230}to{stroke-dashoffset:0}}
 @keyframes treasure-wave{from{opacity:.95;transform:scale(.27)}to{opacity:0;transform:scale(2.3)}}
 @keyframes treasure-rays{0%{opacity:0;transform:scale(.2)}25%{opacity:.9}100%{opacity:.4;transform:scale(1.23) rotate(19deg)}}
-@keyframes treasure-art{0%,27%{opacity:0;transform:scale(.79);filter:brightness(.12)}36%,49%{opacity:.65;transform:scale(.89);filter:brightness(.22)}56%{opacity:1;transform:scale(1.05);filter:brightness(1.13)}72%,100%{opacity:1;transform:scale(1);filter:none}}
+@keyframes treasure-art{0%,39%{opacity:0;transform:scale(.79);filter:brightness(.12)}48%,68%{opacity:.65;transform:scale(.89);filter:brightness(.22)}74%{opacity:1;transform:scale(1.05);filter:brightness(1.13)}91%,100%{opacity:1;transform:scale(1);filter:none}}
 @keyframes treasure-sweep{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
 @keyframes treasure-title{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @keyframes treasure-stamp{from{opacity:0;transform:rotate(-11deg) scale(1.65)}to{opacity:1;transform:rotate(-5deg) scale(1)}}
+/* ===== v3.1 gacha-style treasure reveal ===== */
+.overlay.gacha-theater{padding:0;background:#04050f;backdrop-filter:none}
+.gacha-theater .dialog{width:100%;height:100%;max-height:none;padding:0;border-radius:0;background:transparent;box-shadow:none;overflow:hidden;animation:none}
+.gacha-theater .dialog>.x{display:none}
+.gacha{--rc:#b98cff;--rc2:#6b4cff;position:relative;isolation:isolate;height:100%;overflow:hidden;color:#fff;text-align:center;outline:none;background:radial-gradient(ellipse at 50% 55%,#2a1a55 0%,#0d0f33 55%,#04050f 100%);user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+.gacha.rarity-legend.is-ready,.gacha.rarity-legend.is-burst,.gacha.rarity-legend.is-reveal{--rc:#ffd86b;--rc2:#ff7a3d}
+.gacha.rarity-epic.is-reveal{--rc:#c9a2ff;--rc2:#ffd56a}
+.gacha.is-ready{cursor:pointer}
+.gacha-sky{position:absolute;inset:0;z-index:-2;background-image:radial-gradient(1.5px 1.5px at 12% 18%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 78% 12%,#fff 50%,transparent 51%),radial-gradient(2px 2px at 30% 72%,#ffe9b0 50%,transparent 51%),radial-gradient(1px 1px at 88% 64%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 55% 40%,#d9c8ff 50%,transparent 51%),radial-gradient(1px 1px at 8% 86%,#fff 50%,transparent 51%),radial-gradient(2px 2px at 68% 88%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 42% 8%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 92% 32%,#ffe9b0 50%,transparent 51%),radial-gradient(1px 1px at 22% 48%,#fff 50%,transparent 51%);animation:gTwinkle 2.6s ease-in-out infinite alternate}
+.gacha-vortex{position:absolute;left:50%;top:50%;width:170vmax;height:170vmax;margin:-85vmax 0 0 -85vmax;z-index:-1;pointer-events:none;background:conic-gradient(from 0deg,transparent 0 10%,rgba(150,110,255,.18) 18%,transparent 26% 40%,rgba(255,210,110,.16) 50%,transparent 58% 72%,rgba(150,110,255,.18) 82%,transparent 90%);-webkit-mask-image:radial-gradient(circle,#000 0,transparent 45%);mask-image:radial-gradient(circle,#000 0,transparent 45%);opacity:.5;animation:gSpin 10s linear infinite}
+.is-ready .gacha-vortex{animation-duration:2.4s;opacity:.95}
+.is-reveal .gacha-vortex{opacity:.3}
+.gacha-rays{position:absolute;left:50%;top:44%;width:200vmax;height:200vmax;margin:-100vmax 0 0 -100vmax;z-index:-1;pointer-events:none;background:repeating-conic-gradient(from 0deg,rgba(255,255,255,0) 0deg 9deg,var(--rc) 11deg,rgba(255,255,255,0) 14deg 22deg);-webkit-mask-image:radial-gradient(circle,#000 0,transparent 42%);mask-image:radial-gradient(circle,#000 0,transparent 42%);opacity:0}
+.is-reveal .gacha-rays{animation:gRaysIn 1s ease-out forwards,gSpin 22s linear infinite}
+.gacha-charge-layer{position:absolute;inset:0;display:grid;place-items:center}
+.gacha-pillar{position:absolute;left:50%;top:0;bottom:0;width:130px;margin-left:-65px;background:linear-gradient(90deg,transparent,var(--rc) 42%,#fff 50%,var(--rc) 58%,transparent);filter:blur(8px);opacity:0;transform:scaleX(.05)}
+.is-ready .gacha-pillar{animation:gPillar .6s ease-out forwards,gPillarPulse 1.2s .6s ease-in-out infinite}
+.gacha-circle{grid-area:1/1;width:min(78vw,340px);aspect-ratio:1;position:relative;opacity:0;animation:gFadeIn .8s .3s ease-out forwards}
+.gacha-circle i{position:absolute;inset:0;border-radius:50%;border:2px dashed var(--rc);box-shadow:0 0 18px var(--rc),inset 0 0 18px var(--rc);opacity:.7;animation:gSpin 9s linear infinite}
+.gacha-circle i:nth-child(2){inset:14%;border-style:solid;border-width:1px;animation-direction:reverse;animation-duration:6s}
+.gacha-circle i:nth-child(3){inset:-9%;border-style:dotted;border-width:3px;opacity:.45;animation-duration:14s}
+.is-ready .gacha-circle i{animation-duration:1.8s}
+.gacha-aura{grid-area:1/1;width:min(60vw,260px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--rc) 0%,transparent 65%);filter:blur(10px);opacity:.25;transform:scale(.6);animation:gAura 2.7s ease-in forwards}
+.is-ready .gacha-aura{animation:gAuraPulse .8s ease-in-out infinite alternate}
+.gacha-particles{grid-area:1/1;width:0;height:0;position:relative}
+.gacha-particles i{position:absolute;left:0;top:0;width:var(--s);height:var(--s);margin:calc(var(--s) / -2);border-radius:50%;background:#fff;box-shadow:0 0 10px var(--rc),0 0 4px #fff;opacity:0;animation:gConverge 1.1s var(--d) ease-in infinite}
+.gacha-chest{grid-area:1/1;z-index:2;font-size:clamp(110px,30vw,170px);line-height:1;filter:drop-shadow(0 0 20px var(--rc));animation:gDrop .9s cubic-bezier(.3,1.6,.5,1) both,gShake 1.8s .9s ease-in both}
+.is-ready .gacha-chest{animation:gReady .5s ease-in-out infinite alternate;filter:drop-shadow(0 0 30px var(--rc)) drop-shadow(0 0 60px var(--rc)) brightness(1.15)}
+.is-burst .gacha-chest{animation:gChestPop .6s ease-in forwards}
+.gacha-hint,.gacha-prompt{position:absolute;left:0;right:0;margin:0;padding:0 16px;bottom:calc(14% + env(safe-area-inset-bottom))}
+.gacha-hint{font-weight:850;font-size:15px;color:#e6dcff;letter-spacing:.5px;animation:gBlink 1.4s ease-in-out infinite}
+.gacha-prompt{font-weight:950;font-size:clamp(17px,5vw,22px);color:#fff;text-shadow:0 0 12px var(--rc),0 0 24px var(--rc);opacity:0}
+.is-ready .gacha-hint,.is-burst .gacha-hint{display:none}
+.is-ready .gacha-prompt{animation:gPrompt .9s ease-in-out infinite alternate}
+.is-burst .gacha-charge-layer{animation:gFadeOut .5s .25s forwards}
+.is-reveal .gacha-charge-layer{display:none}
+.gacha-flash{position:absolute;inset:0;z-index:20;background:#fff;opacity:0;pointer-events:none}
+.rarity-legend.is-ready .gacha-flash{animation:gMiniFlash .55s ease-out}
+.is-burst .gacha-flash{animation:gFlash .8s ease-out forwards}
+.gacha-shock{position:absolute;left:50%;top:50%;width:120px;height:120px;margin:-60px;border-radius:50%;border:6px solid #fff;box-shadow:0 0 30px var(--rc),inset 0 0 30px var(--rc);opacity:0;z-index:15;pointer-events:none}
+.is-burst .gacha-shock{animation:gShock .65s ease-out forwards}
+.is-burst .gacha-shock.s2{animation-delay:.12s}
+.gacha-reveal-layer{position:absolute;inset:0;z-index:5;display:none;flex-direction:column;align-items:center;justify-content:center;gap:clamp(8px,2vh,16px);padding:calc(48px + env(safe-area-inset-top)) 18px calc(22px + env(safe-area-inset-bottom))}
+.is-reveal .gacha-reveal-layer{display:flex}
+.gacha-rank{font-weight:1000;font-size:clamp(20px,6vw,30px);letter-spacing:2px;background:linear-gradient(90deg,#fff,var(--rc),#fff,var(--rc2),#fff);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;opacity:0;animation:gRankIn .6s 1.1s cubic-bezier(.2,1.6,.4,1) forwards,gShimmer 2.4s 1.7s linear infinite}
+.gacha-card-wrap{position:relative;perspective:1100px;animation:gFloat 3s 1.6s ease-in-out infinite}
+.gacha-card-wrap::before{content:'';position:absolute;inset:-22%;border-radius:50%;background:radial-gradient(circle,var(--rc) 0%,transparent 62%);filter:blur(18px);opacity:0;z-index:-1;animation:gFadeIn .8s .9s forwards,gAuraPulse 1.6s 1.7s ease-in-out infinite alternate}
+.gacha-card{position:relative;width:min(64vw,270px,calc(46vh * .72));aspect-ratio:5/7;transform-style:preserve-3d;animation:gCardIn 1.35s cubic-bezier(.18,.9,.3,1.12) both}
+.gacha-face{position:absolute;inset:0;border-radius:18px;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.gacha-back{transform:rotateY(180deg);display:grid;place-content:center;gap:8px;background:radial-gradient(circle at 50% 40%,#3b2a7a,#141541 70%);border:3px solid var(--rc);box-shadow:inset 0 0 0 6px rgba(255,255,255,.06)}
+.gacha-back span{font:900 clamp(70px,20vw,110px)/1 Georgia,serif;color:var(--rc);text-shadow:0 0 20px var(--rc)}
+.gacha-back small{font-size:11px;letter-spacing:3px;font-weight:900;color:#e9dcff}
+.gacha-front{background:linear-gradient(135deg,var(--rc),#fff 30%,var(--rc2) 55%,#fff 75%,var(--rc));box-shadow:0 0 30px var(--rc),0 0 70px var(--rc)}
+.rarity-legend .gacha-front{background:linear-gradient(135deg,#ff6b6b,#ffd56a,#7dffb0,#6bc8ff,#c58bff,#ff6bd5,#ffd56a);background-size:300% 300%;animation:gHolo 3s linear infinite alternate}
+.gacha-inner{position:absolute;inset:4px;border-radius:15px;overflow:hidden;display:flex;flex-direction:column;background:#120f2e}
+.gacha-head{flex:0 0 auto;padding:10px 10px 9px;background:linear-gradient(180deg,#1d1748,#120f2e);border-bottom:1px solid var(--rc)}
+.gacha-name{font-weight:950;font-size:clamp(16px,4.8vw,21px);line-height:1.25;color:#fff;text-shadow:0 0 10px var(--rc),0 2px 4px #000;overflow-wrap:anywhere;opacity:0;animation:gUp .5s 1.3s ease-out forwards}
+.gacha-art{position:relative;flex:1 1 auto;min-height:0;overflow:hidden;display:grid;place-items:center;background:radial-gradient(circle at 50% 38%,#fff 0%,var(--treasure-color) 55%,#2a1f4a 120%)}
+.gacha-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.gacha-art .emoji{font-size:clamp(80px,22vw,120px);filter:drop-shadow(0 10px 12px rgba(0,0,0,.25))}
+.gacha-shine{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.7) 48%,transparent 62%);transform:translateX(-120%);animation:gShine 2.8s 1.4s ease-in-out infinite}
+.gacha-info{flex:0 0 auto;padding:8px 10px 10px;background:linear-gradient(0deg,#120f2e,#1d1748);border-top:1px solid var(--rc)}
+.gacha-stars{display:flex;justify-content:center;gap:2px;font-size:clamp(17px,4.6vw,22px);line-height:1}
+.gacha-stars span{display:inline-block;color:#ffd54a;text-shadow:0 0 8px #ffb300,0 0 2px #fff;opacity:0;animation:gStar .45s calc(1.45s + var(--i) * .22s) cubic-bezier(.2,1.8,.4,1) forwards}
+.gacha-desc{margin-top:6px;font-size:clamp(12px,3.4vw,14px);line-height:1.4;font-weight:700;color:#e8e1ff;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;opacity:0;animation:gUp .5s 2.4s ease-out forwards}
+.gacha-first{position:absolute;top:58px;right:10px;z-index:2;padding:6px 11px;border-radius:8px;background:linear-gradient(135deg,#fff3c4,#ffc843);color:#5a3500;font-weight:950;font-size:13px;border:2px solid #b77920;box-shadow:0 4px 12px rgba(0,0,0,.3);opacity:0;animation:gStamp .4s 2.6s cubic-bezier(.2,1.6,.4,1) forwards}
+.gacha-title{margin:0;font-size:clamp(26px,8vw,40px);font-weight:1000;color:#fff2c4;text-shadow:0 0 14px var(--rc),0 3px 0 rgba(0,0,0,.35);opacity:0;animation:gUp .5s 2s ease-out forwards}
+.gacha-continue{border:0;border-radius:16px;padding:14px 28px;min-height:52px;font-weight:950;font-size:16px;color:#2c1b00;background:linear-gradient(135deg,#ffe08a,#ffb43d);box-shadow:0 6px 0 #c98a22,0 0 24px rgba(255,200,90,.5);opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .4s,transform .4s}
+.gacha-continue.show{opacity:1;transform:none;pointer-events:auto;animation:gBtnPulse 1.4s .5s ease-in-out infinite}
+.gacha-sparkles{position:absolute;inset:0;z-index:6;pointer-events:none;display:none}
+.is-reveal .gacha-sparkles{display:block}
+.gacha-sparkles i{position:absolute;left:var(--l);bottom:-30px;font-style:normal;font-size:var(--z);color:var(--rc);text-shadow:0 0 8px var(--rc);opacity:0;animation:gRise var(--t) var(--d) linear infinite}
+.gacha-skip{position:absolute;top:calc(14px + env(safe-area-inset-top));right:14px;z-index:30}
+.is-reveal .gacha-skip{display:none}
+@keyframes gSpin{to{transform:rotate(360deg)}}
+@keyframes gFadeIn{to{opacity:1}}
+@keyframes gFadeOut{to{opacity:0}}
+@keyframes gBlink{50%{opacity:.45}}
+@keyframes gTwinkle{from{opacity:.55}to{opacity:1}}
+@keyframes gRaysIn{from{opacity:0}to{opacity:.5}}
+@keyframes gPillar{to{opacity:.55;transform:scaleX(1)}}
+@keyframes gPillarPulse{0%,100%{opacity:.55;transform:scaleX(1)}50%{opacity:.85;transform:scaleX(1.15)}}
+@keyframes gAura{to{opacity:.85;transform:scale(1.15)}}
+@keyframes gAuraPulse{from{opacity:.75;transform:scale(1.05)}to{opacity:1;transform:scale(1.3)}}
+@keyframes gConverge{0%{opacity:0;transform:translate(var(--x),var(--y)) scale(1)}20%{opacity:1}100%{opacity:0;transform:translate(0,0) scale(.2)}}
+@keyframes gDrop{0%{opacity:0;transform:translateY(-70vh) scale(.6)}70%{opacity:1;transform:translateY(8px) scale(1.05,.92)}100%{opacity:1;transform:none}}
+@keyframes gShake{0%{transform:none}20%{transform:rotate(-3deg)}30%{transform:rotate(3deg)}45%{transform:rotate(-5deg) scale(1.03)}55%{transform:rotate(5deg) scale(1.03)}65%{transform:rotate(-7deg) scale(1.06)}72%{transform:rotate(7deg) scale(1.06)}80%{transform:rotate(-9deg) scale(1.08)}87%{transform:rotate(9deg) scale(1.08)}94%{transform:rotate(-6deg) scale(1.1)}100%{transform:scale(1.1)}}
+@keyframes gReady{from{transform:scale(1.08) rotate(-4deg)}to{transform:scale(1.16) rotate(4deg)}}
+@keyframes gChestPop{0%{transform:scale(1.15)}40%{transform:scale(.9);filter:brightness(2) drop-shadow(0 0 40px #fff)}100%{transform:scale(2.6);opacity:0;filter:brightness(4) drop-shadow(0 0 80px #fff)}}
+@keyframes gPrompt{from{opacity:.55;transform:scale(.96)}to{opacity:1;transform:scale(1.06)}}
+@keyframes gFlash{0%{opacity:0}30%{opacity:1}100%{opacity:0}}
+@keyframes gMiniFlash{0%{opacity:0}25%{opacity:.7;background:#ffe9a8}100%{opacity:0}}
+@keyframes gShock{0%{opacity:1;transform:scale(.2)}100%{opacity:0;transform:scale(9)}}
+@keyframes gRankIn{from{opacity:0;transform:scale(2.2);letter-spacing:14px}to{opacity:1;transform:none;letter-spacing:2px}}
+@keyframes gShimmer{to{background-position:-250% 0}}
+@keyframes gFloat{50%{transform:translateY(-8px)}}
+@keyframes gCardIn{0%{opacity:0;transform:translateY(60px) rotateY(900deg) scale(.25)}20%{opacity:1}100%{opacity:1;transform:none}}
+@keyframes gHolo{from{background-position:0% 50%}to{background-position:100% 50%}}
+@keyframes gShine{0%{transform:translateX(-120%)}45%,100%{transform:translateX(120%)}}
+@keyframes gStar{from{opacity:0;transform:scale(3) rotate(-60deg)}to{opacity:1;transform:none}}
+@keyframes gUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes gStamp{from{opacity:0;transform:rotate(-10deg) scale(2.6)}to{opacity:1;transform:rotate(8deg) scale(1)}}
+@keyframes gBtnPulse{50%{box-shadow:0 6px 0 #c98a22,0 0 40px rgba(255,210,110,.9)}}
+@keyframes gRise{0%{opacity:0;transform:translateY(0) rotate(0)}15%{opacity:1}100%{opacity:0;transform:translateY(-105vh) rotate(240deg)}}
 @media (prefers-reduced-motion:reduce){.v30-result-kicker.treasure-first-stamp,.v30-result-card:before,.v30-progress-track>span{animation:none}}
 /* 2. Ten existing miss types now have independent motion and ambience */
 .v30-miss-scene,.v30-miss-result{position:relative;isolation:isolate;overflow:hidden;border-radius:20px;padding:12px}
@@ -1800,7 +1904,7 @@ function playSfx(type){
    tap:{n:[520],dur:.065,amp:.026,wave:'sine',gap:.065},
    card:{n:[440,660],dur:.075,amp:.024,wave:'triangle',gap:.07},
    scan:{n:[780,1140],dur:.095,amp:.06,wave:'sine',gap:.065},
-   seal:{n:[147,196,294],dur:.39,amp:.052,wave:'triangle',gap:.24},
+   seal:{n:[147,175,220,294],dur:.5,amp:.052,wave:'triangle',gap:.7},
    impact:{n:[82,392,659,1047],dur:.27,amp:.074,wave:'triangle',gap:.085},
    stamp:{n:[123,659],dur:.18,amp:.067,wave:'triangle',gap:.075},
    chest:{n:[294,392,587],dur:.22,amp:.042,wave:'triangle',gap:.13},
@@ -1808,7 +1912,11 @@ function playSfx(type){
    first:{n:[392,523,659,784,1047,1318],dur:.25,amp:.07,wave:'sine',gap:.095},
    complete:{n:[392,523,659,784,1047,1318,1568],dur:.27,amp:.065,wave:'triangle',gap:.095},
    miss:{n:[380,285,211],dur:.16,amp:.036,wave:'triangle',gap:.12},
-   milestone:{n:[660,880,1100],dur:.17,amp:.055,wave:'sine',gap:.085}
+   milestone:{n:[660,880,1100],dur:.17,amp:.055,wave:'sine',gap:.085},
+   charge:{n:[196,233,262,311,349,415,466,523,622],dur:.24,amp:.032,wave:'triangle',gap:.28},
+   upgrade:{n:[523,784,1047,1568],dur:.2,amp:.06,wave:'sine',gap:.07},
+   burst:{n:[65,98,523,784,1047,1568,2093],dur:.45,amp:.075,wave:'triangle',gap:.045},
+   star:{n:[1568,2093],dur:.1,amp:.04,wave:'sine',gap:.05}
   };const p=bank[type]||bank.tap,now=audioCtx.currentTime;
   p.n.forEach((hz,i)=>{const t=now+i*p.gap,osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type=p.wave;osc.frequency.setValueAtTime(hz,t);gain.gain.setValueAtTime(.0001,t);gain.gain.exponentialRampToValueAtTime(p.amp,t+.014);gain.gain.exponentialRampToValueAtTime(.0001,t+p.dur);osc.connect(gain);gain.connect(audioCtx.destination);osc.start(t);osc.stop(t+p.dur+.02)});
  }catch(e){console.debug('sound unavailable',e)}
@@ -1839,7 +1947,8 @@ function showMiss(m,unlocked=false,ctx=state.missContext){
  showDialog(`<div class="v30-miss-result v30-miss-${kind}"><div class="eyebrow">BETTER LUCK NEXT TIME</div><div class="row space"><span class="miss-tag">🤡 꽝 · ${effectLabel(kind)}</span><small class="tiny">탐험 ${ctx?.total||seenIds().length} / 80</small></div><div class="result-art ${style} v30-miss-art"><div class="v30-miss-effects" aria-hidden="true">${kind==='think'?'◇ ✧ ◇':kind==='prank'||kind==='bait'?'🎊 ✦ 🎊':kind==='funny'?'✦ 🤡 ✦':'✧ ✦ ✧'}</div>${imagePreview(m)}</div><h2 class="result-title">${caption}</h2><p class="result-description">${escapeHTML(message)}</p><div class="note" style="text-align:center">🧭 탐험한 QR <b>${ctx?.total||seenIds().length}/80</b> · 연속 꽝 <b>${ctx?.streak||0}</b>회</div><div class="row" style="margin-top:14px"><button class="btn white" data-close style="flex:1">도감으로</button><button class="btn main" id="reScan" style="flex:1">📷 다음 QR 찾기</button></div></div>`);
  $('#reScan').onclick=openScanner;
 }
-function showTreasureResult(t,first,duplicate,preview=false){
+function showTreasureResult(t,first,duplicate,preview=null){
+ const showResultDialog=body=>showDialog(body,false,preview?.onClose||hideDialog);
  const now=preview?1:progressCount(),milestone=!duplicate&&[3,6,9,12].includes(now),complete=!duplicate&&now===12;
  const badgeTitle={3:'초보 탐험가',6:'보물 수집가',9:'전설을 향해',12:'전설의 탐험가'}[now]||'';
  const badgeEmoji={3:'🧭',6:'🗝️',9:'👑',12:'🏆'}[now]||'✦';
@@ -1853,61 +1962,91 @@ function showTreasureResult(t,first,duplicate,preview=false){
  ${milestone?`<div class="v30-milestone" role="status"><span>${badgeEmoji}</span><div><small>COLLECTION MILESTONE</small><strong>${now}개 달성 · ${badgeTitle}</strong></div></div>`:''}
  ${duplicate?'<div class="note">이 보물은 이미 도감에 등록되어 있어요. 다른 QR을 찾아보세요!</div>':''}
  ${complete?'<button class="btn sun block v28-finish-link" id="openFinishCard">🏆 도감 완성 기념 카드 보기</button>':''}
- ${preview?'<button class="btn white block" data-close>미리보기 닫기</button>':'<div class="row" style="margin-top:15px"><button class="btn white" style="flex:1" data-close>도감 보기</button><button class="btn main" style="flex:1" id="reScan">📷 다음 QR 찾기</button></div>'}</div>`;
+ ${preview?`<div class="stack" style="margin-top:15px"><button class="btn light block" id="replayTreasurePreview">연출 다시 재생</button><button class="btn white block" data-close>${preview.closeLabel}</button></div>`:'<div class="row" style="margin-top:15px"><button class="btn white" style="flex:1" data-close>도감 보기</button><button class="btn main" style="flex:1" id="reScan">📷 다음 QR 찾기</button></div>'}</div>`;
  const bindResult=()=>{
   $('#reScan')?.addEventListener('click',openScanner);
   $('#openFinishCard')?.addEventListener('click',showCompletionCard);
+  $('#replayTreasurePreview')?.addEventListener('click',()=>showTreasureResult(t,first,false,preview));
  };
 
  if(duplicate||matchMedia('(prefers-reduced-motion: reduce)').matches){
-  showDialog(body);bindResult();
+  showResultDialog(body);bindResult();
   if(duplicate)playSfx('card');
   return;
  }
  const image=imageSrc(t.image);
- showDialog(`<div class="treasure-reveal" id="treasureRevealStage" style="--treasure-color:${cleanColor(t.color)}">
-  <div class="treasure-reveal__ring" aria-hidden="true"></div>
-  <div class="treasure-reveal__rays" aria-hidden="true"></div>
-  <div class="treasure-reveal__art" aria-hidden="true">${image?`<img src="${escapeHTML(image)}" alt="" decoding="async" fetchpriority="high">`:`<span class="emoji">${escapeHTML(t.emoji||'💎')}</span>`}</div>
-  <svg class="treasure-reveal__seal" viewBox="0 0 200 200" aria-hidden="true">
-   <circle cx="100" cy="100" r="88" fill="#211631" stroke="#f7cf84" stroke-width="2"/>
-   <circle cx="100" cy="100" r="76" fill="none" stroke="#ac7d54"/>
-   <path d="M100 28L167 100 100 172 33 100Z M100 56L140 100 100 144 60 100Z" fill="none" stroke="#f7cf84" stroke-width="2"/>
-   <path class="treasure-reveal__crack" d="M124 18L91 73 113 90 78 125 92 139 63 179" fill="none" stroke="#fff0ad" stroke-width="4" stroke-linejoin="round"/>
-  </svg>
-  <div class="treasure-reveal__wave" aria-hidden="true"></div>
-  <h2 class="treasure-reveal__title">보물 발견!<small>${escapeHTML(t.name)}</small></h2>
-  <button class="v30-skip treasure-reveal__skip" id="skipReveal" type="button">연출 건너뛰기 →</button>
+ const legend=first||complete;
+ const starCount=legend?5:4;
+ const rankLabel=first?'LEGENDARY':complete?'COLLECTION COMPLETE':'SECRET RARE';
+ const artMarkup=image?`<img src="${escapeHTML(image)}" alt="" decoding="async" fetchpriority="high">`:`<span class="emoji">${escapeHTML(t.emoji||'💎')}</span>`;
+ showResultDialog(`<div class="gacha rarity-${legend?'legend':'epic'} is-charge" id="gachaStage" tabindex="0" aria-label="보물 개봉 연출" style="--treasure-color:${cleanColor(t.color)}">
+  <div class="gacha-sky" aria-hidden="true"></div>
+  <div class="gacha-vortex" aria-hidden="true"></div>
+  <div class="gacha-rays" aria-hidden="true"></div>
+  <div class="gacha-charge-layer" aria-hidden="true">
+   <div class="gacha-pillar"></div>
+   <div class="gacha-circle"><i></i><i></i><i></i></div>
+   <div class="gacha-aura"></div>
+   <div class="gacha-particles"></div>
+   <div class="gacha-chest">🎁</div>
+   <p class="gacha-hint">보물의 기운이 모이고 있다…</p>
+   <p class="gacha-prompt">✨ 화면을 터치해서 보물 열기! ✨</p>
+  </div>
+  <div class="gacha-shock" aria-hidden="true"></div><div class="gacha-shock s2" aria-hidden="true"></div>
+  <div class="gacha-reveal-layer">
+   <div class="gacha-rank">✦ ${rankLabel} ✦</div>
+   <div class="gacha-card-wrap"><div class="gacha-card">
+    <div class="gacha-face gacha-back"><span>✦</span><small>SECRET TREASURE</small></div>
+    <div class="gacha-face gacha-front">
+     <div class="gacha-inner">
+      <div class="gacha-head"><div class="gacha-name">${escapeHTML(t.name)}</div></div>
+      <div class="gacha-art">${artMarkup}<div class="gacha-shine" aria-hidden="true"></div></div>
+      <div class="gacha-info"><div class="gacha-stars">${Array.from({length:starCount},(_,i)=>`<span style="--i:${i}">★</span>`).join('')}</div>${t.description?`<div class="gacha-desc">${escapeHTML(t.description)}</div>`:''}</div>
+     </div>
+     ${first?'<div class="gacha-first">🥇 최초 발견</div>':''}
+    </div>
+   </div></div>
+   <h2 class="gacha-title">${complete?'🏆 도감 완성!':'보물 발견!'}</h2>
+   <button class="gacha-continue" id="gachaContinue" type="button">보물 확인하기 →</button>
+  </div>
+  <div class="gacha-sparkles" aria-hidden="true"></div>
+  <div class="gacha-flash" aria-hidden="true"></div>
+  <button class="v30-skip gacha-skip" id="skipReveal" type="button">건너뛰기 ≫</button>
  </div>`);
- const stage=$('#treasureRevealStage'),overlay=stage.closest('.overlay');
- overlay.classList.add('treasure-theater');
- const art=stage.querySelector('img');
- const fallback=()=>{const icon=document.createElement('span');icon.className='emoji';icon.textContent=t.emoji||'💎';art.replaceWith(icon)};
- if(art){if(art.complete&&!art.naturalWidth)fallback();else art.addEventListener('error',fallback,{once:true})}
- playSfx('seal');
- const impact=setTimeout(()=>{
-  if(!stage.isConnected)return;
-  playSfx('impact');buzz(65);
- },1400);
- const finish=()=>{
-  clearTimeout(impact);
-  if(!stage.isConnected)return;
-  showDialog(body);bindResult();
-  confetti(complete?70:first?55:39);
-  if(first)playSfx('stamp');
-  else if(complete)playSfx('complete');
-  else if(milestone)playSfx('milestone');
- };
- const timer=setTimeout(finish,3050);
- $('#skipReveal').onclick=()=>{clearTimeout(timer);finish()};
+ const stage=$('#gachaStage'),overlay=stage.closest('.overlay');
+ overlay.classList.add('gacha-theater');
+ const timers=[],later=(fn,ms)=>timers.push(setTimeout(()=>{if(stage.isConnected)fn()},ms));
+ const artImg=stage.querySelector('.gacha-art img');
+ if(artImg){const fb=()=>{const s=document.createElement('span');s.className='emoji';s.textContent=t.emoji||'💎';artImg.replaceWith(s)};if(artImg.complete&&!artImg.naturalWidth)fb();else artImg.addEventListener('error',fb,{once:true})}
+ const pBox=stage.querySelector('.gacha-particles');
+ for(let i=0;i<34;i++){const p=document.createElement('i'),a=Math.random()*Math.PI*2,r=140+Math.random()*190;p.style.setProperty('--x',(Math.cos(a)*r).toFixed(0)+'px');p.style.setProperty('--y',(Math.sin(a)*r).toFixed(0)+'px');p.style.setProperty('--d',(.4+Math.random()*2.2).toFixed(2)+'s');p.style.setProperty('--s',(3+Math.random()*5).toFixed(1)+'px');pBox.append(p)}
+ const sBox=stage.querySelector('.gacha-sparkles');
+ for(let i=0;i<26;i++){const s=document.createElement('i');s.textContent=i%3?'✦':'✧';s.style.setProperty('--l',(Math.random()*100).toFixed(1)+'%');s.style.setProperty('--d',(Math.random()*3).toFixed(2)+'s');s.style.setProperty('--t',(3+Math.random()*3).toFixed(2)+'s');s.style.setProperty('--z',(10+Math.random()*16).toFixed(0)+'px');sBox.append(s)}
+ let step='charge';
+ const open=()=>{if(step!=='ready')return;step='burst';stage.classList.replace('is-ready','is-burst');playSfx('burst');buzz([50,40,120]);later(reveal,800)};
+ const ready=()=>{if(step!=='charge')return;step='ready';stage.classList.replace('is-charge','is-ready');playSfx(legend?'upgrade':'chest');buzz(legend?[30,40,30]:25);later(open,3500)};
+ const reveal=()=>{step='reveal';stage.classList.replace('is-burst','is-reveal');confetti(legend?80:50);
+  later(()=>playSfx(first?'first':complete?'complete':'treasure'),300);
+  for(let i=0;i<starCount;i++)later(()=>playSfx('star'),1450+i*220);
+  if(first)later(()=>playSfx('stamp'),2650);
+  later(()=>{const b=$('#gachaContinue');b.classList.add('show');b.focus({preventScroll:true})},3000)};
+ const finish=()=>{timers.forEach(clearTimeout);if(!stage.isConnected)return;showResultDialog(body);bindResult();if(milestone)playSfx('milestone')};
+ playSfx('charge');
+ later(ready,2700);
+ stage.addEventListener('click',e=>{if(!e.target.closest('#skipReveal,#gachaContinue'))open()});
+ stage.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&step==='ready'){e.preventDefault();open()}});
+ stage.focus({preventScroll:true});
+ $('#skipReveal').onclick=finish;
+ $('#gachaContinue').onclick=finish;
+}
+function showTreasurePreview(t,returnToEditor=null){
+ showDialog(`<div class="eyebrow">학생 화면 미리보기</div><h2 class="h2">${escapeHTML(t.name)}</h2><p class="note">미리보기는 참여 기록이나 최초 발견자를 변경하지 않습니다.</p><div class="stack"><button class="btn main block" id="previewTreasure">보물 발견 연출</button><button class="btn sun block" id="previewFirst">최초 발견 연출</button>${returnToEditor?'<button class="btn white block" data-close>카드 수정으로 돌아가기</button>':''}</div>`,false,returnToEditor||hideDialog);
+ const preview={onClose:returnToEditor||(()=>showTreasurePreview(t)),closeLabel:returnToEditor?'카드 수정으로 돌아가기':'미리보기 선택으로'};
+ $('#previewTreasure').onclick=()=>showTreasureResult(t,false,false,preview);
+ $('#previewFirst').onclick=()=>showTreasureResult(t,true,false,preview);
 }
 function showAdminQrPreview(q){const t=data.treasures.find(x=>x.id===q.treasureId),m=q.memeId==='random'?data.memes[0]:data.memes.find(x=>x.id===q.memeId);let item=q.kind==='treasure'?t:m;
- if(t&&q.kind==='treasure'){
-  showDialog(`<div class="eyebrow">학생 화면 미리보기</div><h2 class="h2">${escapeHTML(t.name)}</h2><p class="note">미리보기는 참여 기록이나 최초 발견자를 변경하지 않습니다.</p><button class="btn main block" id="previewTreasure">보물 발견 연출</button><button class="btn sun block" id="previewFirst" style="margin-top:8px">최초 발견 연출</button></div>`);
-  $('#previewTreasure').onclick=()=>showTreasureResult(t,false,false,true);
-  $('#previewFirst').onclick=()=>showTreasureResult(t,true,false,true);
-  return;
- }
+ if(t&&q.kind==='treasure'){showTreasurePreview(t);return;}
  showDialog(`<div class="eyebrow">NO-RECORD PREVIEW · ${escapeHTML(q.id)}</div><h2 class="h2">📱 학생 화면 미리보기</h2><div class="note">테스트 미리보기는 참여 기록이나 최초 발견자를 변경하지 않습니다.</div><div class="phone-preview"><div class="tiny">학생자치회 보물찾기</div><div class="result-art ${q.kind==='miss'?'miss-funny':''}" style="background:${q.kind==='treasure'?cleanColor(t?.color):'#e7f0ee'}">${imagePreview(item||{emoji:'?'})}</div><div class="result-title">${q.kind==='treasure'?'🎉 보물 발견!':'🤡 꽝!'}</div><p class="result-description">${escapeHTML(q.kind==='treasure'?t?.name||'미지정':m?.text||'랜덤 꽝')}</p></div><button class="btn light block" data-close>확인</button>`)}
 async function swapQrContents(firstId,secondId){if(firstId===secondId)return;const a=data.qrs.find(x=>x.id===firstId),b=data.qrs.find(x=>x.id===secondId);if(!a||!b)return;const keys=['kind','treasureId','memeId'];let ac={},bc={};for(const k of keys){ac[k]=b[k];bc[k]=a[k]}const aa={...a,...ac},bb={...b,...bc};if(!importantQrChange(`${firstId} ↔ ${secondId} 교환`))return;try{await batchSaveEntities('qrs',[aa,bb]);Object.assign(a,ac);Object.assign(b,bc);saveLocal();state.swapSelected=null;await recordQrChange(`${firstId} ↔ ${secondId} 콘텐츠 교환`);render();toast(`${firstId} ↔ ${secondId} 콘텐츠를 교환했어요. QR 주소와 위치는 그대로예요.`)}catch(err){toast('교환 실패: '+err.message)}}
 
@@ -1990,7 +2129,7 @@ function openBook(id){
  <button class="btn main block atlas-modal-close" data-close style="margin-top:16px">도감으로 돌아가기</button>`);
  if(found){requestAnimationFrame(()=>$('.book-scene')?.classList.add('open'));}
 }
-function showDialog(body,wide=false){document.querySelector('.result-celebrate')?.remove();closeScan();$('#modalRoot').innerHTML=`<div class="overlay v30-overlay" id="overlay"><div class="dialog v30-dialog ${wide?'wide':''}" role="dialog" aria-modal="true"><button class="x" data-close aria-label="닫기">×</button>${body}</div></div>`;$('#overlay').addEventListener('click',e=>{if(e.target.id==='overlay'||e.target.closest('[data-close]'))hideDialog()});state.modal=true}
+function showDialog(body,wide=false,onClose=hideDialog){document.querySelector('.result-celebrate')?.remove();closeScan();$('#modalRoot').innerHTML=`<div class="overlay v30-overlay" id="overlay"><div class="dialog v30-dialog ${wide?'wide':''}" role="dialog" aria-modal="true"><button class="x" data-close aria-label="닫기">×</button>${body}</div></div>`;$('#overlay').addEventListener('click',e=>{if(e.target.id==='overlay'||e.target.closest('[data-close]'))onClose()});state.modal=true}
 function hideDialog(){document.querySelector('.result-celebrate')?.remove();if(state.bulk?.busy){toast('이미지 업로드가 끝난 다음 창을 닫아 주세요.');return}const refresh=!!state.bulk?.items?.some(x=>x.status==='done');if(state.bulk){state.bulk.previews?.forEach(URL.revokeObjectURL);state.bulk=null}closeScan();$('#modalRoot').innerHTML='';state.modal=false;if(refresh&&state.view==='admin')render()}
 
 function openGameGuide(){
@@ -2115,7 +2254,7 @@ function renderPrintAudit(){const results=state.printAudit||auditPrintQuick();re
 async function auditAllImages(){if(state.printAuditBusy)return;state.printAuditBusy=true;state.printAudit=null;render();const checks=auditPrintQuick();const files=[...data.treasures,...data.memes].filter(item=>imageSrc(item.image));const result=await Promise.all(files.map(item=>new Promise(resolve=>{const img=new Image();let done=false;const finish=(ok)=>{if(done)return;done=true;clearTimeout(timer);img.onload=img.onerror=null;resolve(ok)};const timer=setTimeout(()=>finish(false),5500);img.onload=()=>finish(true);img.onerror=()=>finish(false);img.src=imageSrc(item.image)})));let goodQr=0;for(const q of data.qrs){try{const canvas=qrCanvas(qrUrl(q),64);if(canvas.width===64&&canvas.height===64)goodQr++;}catch(e){console.warn('QR 생성 실패',q.id,e)}}checks.push({label:'실제 QR 이미지 80개 생성',ok:goodQr===80,note:`정상 ${goodQr}/80개`});checks.push({label:'등록된 이미지 로딩',ok:result.every(Boolean),note:`정상 ${result.filter(Boolean).length}/${files.length}개`});state.printAudit=checks;state.printAuditBusy=false;render();toast(checks.every(c=>c.ok)?'✅ 인쇄 점검 완료!':'⚠️ 일부 점검 항목을 확인해 주세요.')}
 function renderQRAdmin(){let term=state.adminSearch.trim().toLowerCase(),qs=data.qrs.filter(q=>!term||[q.id,q.code,q.location,q.kind,q.treasureId].some(x=>String(x).toLowerCase().includes(term)));return `<div class="panel"><div class="row space"><div><h2 class="h2">🗺 QR코드 80개 관리</h2><p class="muted">QR 인쇄물은 그대로! 보물·꽝만 실시간으로 바꿀 수 있어요.</p></div><button class="btn main small" id="randomAssign">🎲 보물 12종 랜덤 배치</button></div>${qrWarnings()}<div class="toolbar"><input class="text" id="qrSearch" placeholder="QR번호, 코드, 설치 위치 검색" style="flex:1;min-width:150px" value="${escapeHTML(state.adminSearch)}"><span class="chip gray">${qs.length} / 80</span><button class="btn white small" id="qrExportCsv">⬇ 배치표 CSV</button></div><div class="qr-board-tools"><button class="btn small ${state.qrLayout==='board'?'main':'white'}" id="viewBoard">▦ 카드 보기</button><button class="btn small ${state.qrLayout==='table'?'main':'white'}" id="viewTable">☷ 표 보기</button><button class="btn small ${state.swapMode?'sun':'white'}" id="swapModeToggle">⇄ ${state.swapMode?'교환 모드 ON':'QR 위치 교환'}</button><span class="qr-legend">${state.swapMode?(state.swapSelected?`${state.swapSelected} 선택됨 · 교환할 두 번째 QR을 누르세요.`:'교환할 QR 2개를 차례로 선택하세요.'): '💎 금색: 보물 · 회색: 꽝 / QR을 누르면 편집'}</span></div>
 ${state.qrLayout==='board'?`<div class="qr-board">${qs.map(q=>`<button class="qr-tile ${q.kind==='treasure'?'treasure':'miss'} ${state.swapSelected===q.id?'selected':''}" data-qr-tile="${q.id}" type="button" title="${escapeHTML(q.location||'설치 위치 미등록')}"><span>${q.kind==='treasure'?'💎':'·'}</span><strong>${q.id.replace('Q','')}</strong><small>${escapeHTML(q.code)}</small></button>`).join('')}</div>`:`<div class="list-wrap" style="margin-top:16px"><table class="data-table"><thead><tr><th>QR</th><th>코드</th><th>종류</th><th>콘텐츠</th><th>설치 위치</th><th>관리</th></tr></thead><tbody>${qs.map(q=>{let kind=q.kind==='treasure',t=data.treasures.find(t=>t.id===q.treasureId),m=data.memes.find(m=>m.id===q.memeId);return `<tr><td><b>${q.id}</b></td><td style="font-family:monospace;font-weight:800">${escapeHTML(q.code)}</td><td><span class="chip ${kind?'gold':'gray'}">${kind?'💎 보물':'🤡 꽝'}</span></td><td>${escapeHTML(kind?(t?.name||'⚠ 미지정'):(q.memeId==='random'?'랜덤 짤':m?.text?.slice(0,18)||'미지정'))}</td><td>${escapeHTML(q.location||'-')}</td><td><button class="btn small light" data-qr-edit="${q.id}">✏️ 수정</button><button class="btn small white" data-qr-test="${q.id}">👀</button></td></tr>`}).join('')}</tbody></table></div>`}<p class="helper" style="margin-top:14px">교환 기능은 보물·꽝 연결만 서로 바꿉니다. QR 번호, 인쇄 코드, 설치 장소는 변하지 않습니다.</p></div>${renderQrLog()}`}
-function renderTreasureAdmin(){return `<div class="row space"><div><h2 class="h2">💎 보물 카드 12종 편집</h2><p class="muted">학생회 임원 이름, 이모지, 설명, 사진을 자유롭게 설정할 수 있어요.</p></div></div><div class="v29-bulk-callout"><div><strong>🖼️ 보물 이미지 12종 일괄 등록</strong><p>T01.png ~ T12.png 파일을 자동으로 알맞은 보물 카드에 연결해요. 미리보기 후 등록할 수 있어요.</p></div><button type="button" class="btn main" id="bulkTreasure">📤 이미지 일괄 등록</button></div><div class="admin-edit-grid">${data.treasures.map(t=>`<div class="edit-card"><div class="head"><div class="avatar" style="background:${cleanColor(t.color)}">${t.image?`<img src="${escapeHTML(imageSrc(t.thumb||t.image))}" loading="lazy" decoding="async" data-asset-emoji="${escapeHTML(t.emoji||'🎁')}" alt="">`:escapeHTML(t.emoji)}</div><div style="min-width:0"><div class="tiny">TREASURE ${t.id}</div><div style="font-weight:950;overflow-wrap:anywhere">${escapeHTML(t.name)}</div></div></div><p class="muted" style="font-size:12px;min-height:38px">${escapeHTML(t.description)}</p><button class="btn light block small" data-treasure-edit="${t.id}">✏️ 카드 수정</button></div>`).join('')}</div>`}
+function renderTreasureAdmin(){return `<div class="row space"><div><h2 class="h2">💎 보물 카드 12종 편집</h2><p class="muted">학생회 임원 이름, 이모지, 설명, 사진을 자유롭게 설정할 수 있어요.</p></div></div><div class="v29-bulk-callout"><div><strong>🖼️ 보물 이미지 12종 일괄 등록</strong><p>T01.png ~ T12.png 파일을 자동으로 알맞은 보물 카드에 연결해요. 미리보기 후 등록할 수 있어요.</p></div><button type="button" class="btn main" id="bulkTreasure">📤 이미지 일괄 등록</button></div><div class="admin-edit-grid">${data.treasures.map(t=>`<div class="edit-card"><div class="head"><div class="avatar" style="background:${cleanColor(t.color)}">${t.image?`<img src="${escapeHTML(imageSrc(t.thumb||t.image))}" loading="lazy" decoding="async" data-asset-emoji="${escapeHTML(t.emoji||'🎁')}" alt="">`:escapeHTML(t.emoji)}</div><div style="min-width:0"><div class="tiny">TREASURE ${t.id}</div><div style="font-weight:950;overflow-wrap:anywhere">${escapeHTML(t.name)}</div></div></div><p class="muted" style="font-size:12px;min-height:38px">${escapeHTML(t.description)}</p><div class="stack"><button class="btn light block small" data-treasure-edit="${t.id}">✏️ 카드 수정</button><button class="btn white block small" data-treasure-preview="${t.id}">▶ 발견 연출 미리보기</button></div></div>`).join('')}</div>`}
 function renderMemeAdmin(){return `<div class="row space"><div><h2 class="h2">🤡 꽝 이미지·멘트 편집</h2><p class="muted">이미지, 멘트, 연출 유형을 각각 수정할 수 있어요.</p></div><button class="btn main small" id="addMeme">+ 꽝 추가</button></div>
 <div class="v29-bulk-callout"><div><strong>🤡 꽝 이미지 여러 개 추가</strong><p>이미지를 여러 개 선택하면 새 꽝 콘텐츠로 등록돼요. 기존 꽝은 그대로 유지됩니다.</p></div><button type="button" class="btn main" id="bulkMeme">📤 꽝 일괄 추가</button></div><div class="admin-edit-grid">${data.memes.map(m=>`<div class="edit-card"><div class="head"><div class="avatar">${m.image?`<img src="${escapeHTML(imageSrc(m.thumb||m.image))}" loading="lazy" decoding="async" data-asset-emoji="${escapeHTML(m.emoji||'🤡')}" alt="">`:escapeHTML(m.emoji)}</div><div><div class="tiny">${m.id}</div><strong>꽝 콘텐츠</strong><div class="chip gray">${effectLabel(effectType(m))}</div></div></div><p class="muted" style="font-size:13px;min-height:40px">${escapeHTML(m.text)}</p><div class="row"><button class="btn light small" data-meme-edit="${m.id}" style="flex:1">✏️ 수정</button><button class="btn white small" data-meme-test="${m.id}" title="기록 없는 미리보기">👀</button><button class="btn white small" data-meme-delete="${m.id}">삭제</button></div></div>`).join('')}</div>
 <div class="section panel"><h2 class="h2">💬 상황별 꽝 대사</h2><p class="muted">학생이 QR을 몇 번 탐험했는지에 따라 자동으로 표시되는 문구예요. 한 줄에 대사 하나씩 입력하면 무작위로 출력돼요. 비워 두면 해당 상황은 기본 꽝 멘트를 보여줘요.</p><form id="reactionForm" class="reaction-editor">${REACTION_TYPES.map(([key,label])=>`<div class="field"><label for="reaction-${key}">${label}</label><textarea maxlength="800" id="reaction-${key}" rows="2">${escapeHTML(typeof data.settings?.reactions?.[key]==='string'?data.settings.reactions[key]:DEFAULT_REACTIONS[key])}</textarea></div>`).join('')}<button class="btn main block" type="submit">💾 상황별 대사 저장</button></form></div>`}
@@ -2136,6 +2275,7 @@ $$('[data-qr-tile]').forEach(el=>el.onclick=async()=>{let id=el.dataset.qrTile;i
  $('#randomAssign')?.addEventListener('click',randomAssign);$('#bulkTreasure')?.addEventListener('click',()=>openBulkAssets('treasures'));$('#bulkMeme')?.addEventListener('click',()=>openBulkAssets('memes'));
  $('#qrExportCsv')?.addEventListener('click',exportQrCsv);$('#printCsv')?.addEventListener('click',exportQrCsv);
  $$('[data-treasure-edit]').forEach(x=>x.onclick=()=>openTreasureEdit(x.dataset.treasureEdit));
+ $$('[data-treasure-preview]').forEach(x=>x.onclick=()=>showTreasurePreview(data.treasures.find(t=>t.id===x.dataset.treasurePreview)));
  $$('[data-meme-edit]').forEach(x=>x.onclick=()=>openMemeEdit(x.dataset.memeEdit));$$('[data-meme-test]').forEach(x=>x.onclick=()=>showMiss(data.memes.find(m=>m.id===x.dataset.memeTest),false,null));
  $$('[data-meme-delete]').forEach(x=>x.onclick=()=>deleteMeme(x.dataset.memeDelete));
  $('#addMeme')?.addEventListener('click',()=>openMemeEdit(null));$('#reactionForm')?.addEventListener('submit',saveReactions);
@@ -2155,7 +2295,26 @@ $$('[data-qr-tile]').forEach(el=>el.onclick=async()=>{let id=el.dataset.qrTile;i
 }
 function openQREdit(id){const q=data.qrs.find(x=>x.id===id);if(!q)return;showDialog(`<div class="eyebrow">QR CONTENT EDITOR</div><h2 class="h2">✏️ ${q.id} 수정</h2><div class="note">인쇄된 QR은 그대로! 연결된 결과만 바꿀 수 있어요.</div><form id="qrEditForm" class="stack" style="margin-top:14px"><div class="field"><label>종류</label><select id="qeKind"><option value="miss" ${q.kind==='miss'?'selected':''}>🤡 꽝</option><option value="treasure" ${q.kind==='treasure'?'selected':''}>💎 보물</option></select></div><div class="field" id="qeTreasureWrap"><label>보물 종류</label><select id="qeTreasure">${data.treasures.map(t=>`<option value="${t.id}" ${t.id===q.treasureId?'selected':''}>${escapeHTML(t.emoji)} ${escapeHTML(t.name)} (${t.id})</option>`).join('')}</select></div><div class="field" id="qeMemeWrap"><label>꽝 이미지</label><select id="qeMeme"><option value="random">🎲 매번 랜덤</option>${data.memes.map(m=>`<option value="${m.id}" ${m.id===q.memeId?'selected':''}>${escapeHTML(m.emoji)} ${escapeHTML(m.text.slice(0,25))}</option>`).join('')}</select></div><div class="field"><label>설치 장소 (선택 · 비워도 됨)</label><input id="qeLocation" value="${escapeHTML(q.location)}" maxlength="60" placeholder="예: 2층 복도 창문 옆"></div><div class="row"><button class="btn white" type="button" id="previewThis" style="flex:1">👀 학생 화면 미리보기</button><button class="btn main" style="flex:1">저장하기</button></div></form>`);const kindChange=()=>{$('#qeTreasureWrap').style.display=$('#qeKind').value==='treasure'?'flex':'none';$('#qeMemeWrap').style.display=$('#qeKind').value==='miss'?'flex':'none'};$('#qeKind').onchange=kindChange;kindChange();const newVals=()=>({kind:$('#qeKind').value,treasureId:$('#qeKind').value==='treasure'?$('#qeTreasure').value:'',memeId:$('#qeKind').value==='miss'?$('#qeMeme').value:'random',location:$('#qeLocation').value.trim()});$('#previewThis').onclick=()=>showAdminQrPreview({...q,...newVals()});$('#qrEditForm').onsubmit=async e=>{e.preventDefault();let change=newVals();if(['kind','treasureId','memeId'].some(k=>String(q[k])!==String(change[k]))&&!importantQrChange(`${id} → ${change.kind==='treasure'?'보물 '+change.treasureId:'꽝'}`))return;try{let moved=null;if(change.kind==='treasure'){let old=data.qrs.find(x=>x.id!==id&&x.kind==='treasure'&&x.treasureId===change.treasureId);if(old)moved={...old,kind:q.kind==='treasure'?'treasure':'miss',treasureId:q.kind==='treasure'?q.treasureId:'',memeId:q.kind==='miss'?q.memeId:'random'}}const revised={...q,...change};await batchSaveEntities('qrs',moved?[revised,moved]:[revised]);Object.assign(q,change);if(moved)Object.assign(data.qrs.find(x=>x.id===moved.id),moved);saveLocal();await recordQrChange(`${q.id}: ${change.kind==='treasure'?'보물 '+change.treasureId:'꽝'} 설정${moved?' (다른 QR과 교환)':''}`);hideDialog();render();toast(`✅ ${q.id} 저장 완료${moved?' · 다른 QR과 콘텐츠 교환됨':''}`)}catch(err){toast('저장 실패: '+err.message)}}}
 async function randomAssign(){if(!importantQrChange('80개 QR의 보물 12종 무작위 재배치'))return;if(!confirm('80개 QR 중 12개에 서로 다른 보물을 무작위 배치할까요? 기존 배치가 바뀝니다.'))return;let indices=Array.from({length:80},(_,i)=>i);for(let i=indices.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[indices[i],indices[j]]=[indices[j],indices[i]]}let selected=indices.slice(0,12);let changes=data.qrs.map((q,i)=>({...q,kind:selected.includes(i)?'treasure':'miss',treasureId:selected.includes(i)?`T${String(selected.indexOf(i)+1).padStart(2,'0')}`:'',memeId:'random'}));try{await batchSaveEntities('qrs',changes);data.qrs=changes;saveLocal();await recordQrChange('80개 QR 보물 12종 무작위 재배치');render();toast('12개 보물을 무작위 배치했어요!')}catch(err){toast('배치 실패: '+err.message)}}
-function openTreasureEdit(id){let t=data.treasures.find(x=>x.id===id),tempImage=t.image;showDialog(`<div class="eyebrow">TREASURE CARD EDITOR ${id}</div><h2 class="h2">💎 보물 카드 수정</h2><p class="muted">학생회 임원 캐릭터 이미지는 나중에 등록해도 돼요. 현재는 임시 아이콘으로 표시됩니다.</p><form class="stack" id="treasureEditForm"><div class="form-grid"><div class="field"><label>임시 이모지</label><input id="teEmoji" maxlength="8" value="${escapeHTML(t.emoji)}"></div><div class="field"><label>카드 배경색</label><input id="teColor" type="color" value="${cleanColor(t.color)}" style="height:46px;padding:4px"></div></div><div class="field"><label>보물 이름</label><input id="teName" maxlength="25" required value="${escapeHTML(t.name)}"></div><div class="field"><label>보물 설명</label><input id="teDescription" maxlength="100" value="${escapeHTML(t.description)}"></div><div class="field"><label>캐릭터 이미지 (나중에 등록 가능)</label><input type="file" accept="image/png,image/jpeg,image/webp" id="teFile"><span class="helper">이미지는 자동 압축 후 저장됩니다.</span></div>${tempImage?'<button class="btn small light" type="button" id="removeTreasureImage">기존 이미지 삭제</button>':''}<div class="note" id="imageStatus">${tempImage?'등록된 이미지가 있어요.':'이미지가 없으면 임시 아이콘이 보여요.'}</div><button class="btn main block" type="submit">보물 카드 저장</button></form>`);$('#teFile').onchange=()=>{$('#imageStatus').textContent='이미지 선택 완료. 저장 시 업로드됩니다.'};$('#removeTreasureImage')?.addEventListener('click',()=>{tempImage='';$('#teFile').value='';$('#imageStatus').textContent='이미지가 삭제될 예정입니다.'});$('#treasureEditForm').onsubmit=async e=>{e.preventDefault();let btn=$('#treasureEditForm button[type="submit"]');btn.disabled=true;try{const file=$('#teFile').files?.[0];if(file){setAssetStatus('#imageStatus','이미지 처리 시작…');tempImage=await prepareAsset(file,'treasures',id,msg=>setAssetStatus('#imageStatus',msg))}let thumb=t.thumb||'';if(file){thumb=await uploadAssetThumbnail(file,'treasures',id,msg=>setAssetStatus('#imageStatus',msg))||tempImage}let change={emoji:$('#teEmoji').value.trim()||'🎁',name:$('#teName').value.trim(),description:$('#teDescription').value.trim(),color:$('#teColor').value,image:tempImage,thumb:tempImage?(thumb||tempImage):''};await updateEntity('treasures',id,change);Object.assign(t,change);saveLocal();hideDialog();render();toast('보물 카드가 저장되었어요.')}catch(err){console.error('이미지 저장 오류',err);setAssetStatus('#imageStatus','❌ '+assetErrorMessage(err),true);toast('이미지 저장 실패: '+assetErrorMessage(err));btn.disabled=false}}}
+function openTreasureEdit(id){let t=data.treasures.find(x=>x.id===id),tempImage=t.image;showDialog(`<div class="eyebrow">TREASURE CARD EDITOR ${id}</div><h2 class="h2">💎 보물 카드 수정</h2><p class="muted">학생회 임원 캐릭터 이미지는 나중에 등록해도 돼요. 현재는 임시 아이콘으로 표시됩니다.</p><form class="stack" id="treasureEditForm"><div class="form-grid"><div class="field"><label>임시 이모지</label><input id="teEmoji" maxlength="8" value="${escapeHTML(t.emoji)}"></div><div class="field"><label>카드 배경색</label><input id="teColor" type="color" value="${cleanColor(t.color)}" style="height:46px;padding:4px"></div></div><div class="field"><label>보물 이름</label><input id="teName" maxlength="25" required value="${escapeHTML(t.name)}"></div><div class="field"><label>보물 설명</label><input id="teDescription" maxlength="100" value="${escapeHTML(t.description)}"></div><div class="field"><label>캐릭터 이미지 (나중에 등록 가능)</label><input type="file" accept="image/png,image/jpeg,image/webp" id="teFile"><span class="helper">이미지는 자동 압축 후 저장됩니다.</span></div>${tempImage?'<button class="btn small light" type="button" id="removeTreasureImage">기존 이미지 삭제</button>':''}<div class="note" id="imageStatus">${tempImage?'등록된 이미지가 있어요.':'이미지가 없으면 임시 아이콘이 보여요.'}</div><button class="btn light block" type="button" id="previewTreasureDraft">▶ 수정 중인 카드 연출 미리보기</button><button class="btn main block" type="submit">보물 카드 저장</button></form>`);$('#teFile').onchange=()=>{$('#imageStatus').textContent='이미지 선택 완료. 저장 시 업로드됩니다.'};$('#removeTreasureImage')?.addEventListener('click',()=>{tempImage='';$('#teFile').value='';$('#imageStatus').textContent='이미지가 삭제될 예정입니다.'});const readDraft=()=>({emoji:$('#teEmoji').value.trim()||'🎁',name:$('#teName').value.trim(),description:$('#teDescription').value.trim(),color:$('#teColor').value});
+const editor=$('#overlay'),form=$('#treasureEditForm'),previewButton=$('#previewTreasureDraft'),saveButton=form.querySelector('[type="submit"]');
+previewButton.onclick=async()=>{
+ const draft={...t,...readDraft(),image:tempImage};
+ draft.name=draft.name||'이름 미입력';
+ const file=$('#teFile').files?.[0];
+ previewButton.disabled=saveButton.disabled=true;
+ try{
+  if(file)draft.image=await blobToDataUrl(await compressImage(file));
+  if(!editor.isConnected)return;
+  showTreasurePreview(draft,()=>{
+   hideDialog();
+   $('#modalRoot').append(editor);
+   state.modal=true;
+   previewButton.focus({preventScroll:true});
+  });
+ }catch(err){toast('이미지 미리보기 실패: '+err.message)}
+ finally{previewButton.disabled=saveButton.disabled=false}
+};
+form.onsubmit=async e=>{e.preventDefault();if(saveButton.disabled)return;const fields=readDraft();saveButton.disabled=previewButton.disabled=true;try{const file=$('#teFile').files?.[0];if(file){setAssetStatus('#imageStatus','이미지 처리 시작…');tempImage=await prepareAsset(file,'treasures',id,msg=>setAssetStatus('#imageStatus',msg))}let thumb=t.thumb||'';if(file){thumb=await uploadAssetThumbnail(file,'treasures',id,msg=>setAssetStatus('#imageStatus',msg))||tempImage}let change={...fields,image:tempImage,thumb:tempImage?(thumb||tempImage):''};await updateEntity('treasures',id,change);Object.assign(t,change);saveLocal();hideDialog();render();toast('보물 카드가 저장되었어요.')}catch(err){console.error('이미지 저장 오류',err);setAssetStatus('#imageStatus','❌ '+assetErrorMessage(err),true);toast('이미지 저장 실패: '+assetErrorMessage(err));saveButton.disabled=previewButton.disabled=false}}}
 function openMemeEdit(id){let m=data.memes.find(x=>x.id===id);if(!m)m={id:'M'+String(Date.now()).slice(-8),emoji:'🤡',text:'새로운 꽝!',image:'',effect:'normal'};let tempImage=m.image;showDialog(`<div class="eyebrow">MISS MEME EDITOR</div><h2 class="h2">🤡 꽝 콘텐츠 ${id?'수정':'추가'}</h2><form class="stack" id="memeEditForm"><div class="form-grid"><div class="field"><label>표시 이모지</label><input id="meEmoji" maxlength="8" value="${escapeHTML(m.emoji)}"></div><div class="field"><label>등장 연출</label><select id="meEffect">${['normal','funny','empty','prank','think','fake','error','bait','escape','loading'].map(x=>`<option value="${x}" ${effectType(m)===x?'selected':''}>${effectLabel(x)}</option>`).join('')}</select></div></div><div class="field"><label>꽝 멘트</label><textarea id="meText" maxlength="130" required>${escapeHTML(m.text)}</textarea></div><div class="field"><label>짤 이미지 (선택)</label><input id="meFile" type="file" accept="image/png,image/jpeg,image/webp"></div>${tempImage?'<button class="btn light small" type="button" id="removeMemeImage">기존 이미지 삭제</button>':''}<div class="note" id="memeImageStatus">${F.enabled?'이미지는 Firebase Storage에 별도로 저장돼요.':'체험 모드에서는 이미지가 브라우저에 저장돼요.'}</div><div class="row"><button class="btn white" id="previewMemeDraft" type="button" style="flex:1">👀 미리보기</button><button class="btn main" style="flex:1">저장하기</button></div></form>`);$('#meFile').onchange=()=>{$('#memeImageStatus').textContent='이미지 선택 완료. 저장하면 업로드됩니다.'};$('#removeMemeImage')?.addEventListener('click',()=>{tempImage='';$('#meFile').value='';$('#memeImageStatus').textContent='기존 이미지를 삭제할 예정입니다.'});$('#previewMemeDraft').onclick=()=>showMiss({...m,emoji:$('#meEmoji').value.trim()||'🤡',text:$('#meText').value.trim(),effect:$('#meEffect').value,image:tempImage},false,null);$('#memeEditForm').onsubmit=async e=>{e.preventDefault();let btn=$('#memeEditForm button[type="submit"], #memeEditForm button:not([type])');if(btn)btn.disabled=true;try{const file=$('#meFile').files?.[0];if(file){setAssetStatus('#memeImageStatus','이미지 처리 시작…');tempImage=await prepareAsset(file,'memes',m.id,msg=>setAssetStatus('#memeImageStatus',msg))}let thumb=m.thumb||'';if(file){thumb=await uploadAssetThumbnail(file,'memes',m.id,msg=>setAssetStatus('#memeImageStatus',msg))||tempImage}let change={...m,emoji:$('#meEmoji').value.trim()||'🤡',text:$('#meText').value.trim(),effect:$('#meEffect').value,image:tempImage,thumb:tempImage?(thumb||tempImage):''};await updateEntity('memes',m.id,change);if(id)Object.assign(data.memes.find(x=>x.id===id),change);else data.memes.push(change);saveLocal();hideDialog();render();toast('꽝 콘텐츠가 저장되었어요.')}catch(err){console.error('꽝 이미지 저장 오류',err);setAssetStatus('#memeImageStatus','❌ '+assetErrorMessage(err),true);toast('이미지 저장 실패: '+assetErrorMessage(err));if(btn)btn.disabled=false}}}
 async function deleteMeme(id){if(data.memes.length===1){toast('꽝 콘텐츠를 최소 하나 남겨주세요.');return}if(!importantQrChange(`꽝 콘텐츠 ${id} 삭제`))return;if(!confirm('해당 꽝 이미지와 문구를 삭제할까요?'))return;try{if(F.enabled)await F.lib.fs.deleteDoc(F.lib.fs.doc(F.adminDb,'memes',id));data.memes=data.memes.filter(x=>x.id!==id);data.qrs.forEach(x=>{if(x.memeId===id)x.memeId='random'});await batchSaveEntities('qrs',data.qrs.filter(q=>q.memeId==='random'));saveLocal();await recordQrChange(`꽝 콘텐츠 ${id} 삭제 및 연결 정리`);render();toast('꽝 콘텐츠를 삭제했어요.')}catch(err){toast('삭제 실패: '+err.message)}}
 // v2.5.3 — Storage 업로드 진단 및 진행률 표시: 이미지는 JPEG Blob으로 압축합니다.
